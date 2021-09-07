@@ -1,0 +1,8 @@
+{
+    "title": "Denoflare",
+    "description": "Develop, test, and deploy Cloudflare Workers with Deno.",
+    "origin": "https://denoflare.dev",
+    "twitterUsername": "@denoflare",
+    "themeColor": "#5f27ca",
+    "themeColorDark": "#5f27ca",
+}
