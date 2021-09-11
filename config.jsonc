@@ -1,8 +1,11 @@
 {
-    "title": "Denoflare",
-    "description": "Develop, test, and deploy Cloudflare Workers with Deno.",
-    "origin": "https://denoflare.dev",
-    "twitterUsername": "@denoflare",
+    "product": "Denoflare",
     "themeColor": "#5f27ca",
     "themeColorDark": "#5f27ca",
+    "siteMetadata": {
+        "title": "Denoflare",
+        "description": "Develop, test, and deploy Cloudflare Workers with Deno.",
+        "origin": "https://denoflare.dev",
+        "twitterUsername": "@denoflare",
+    }
 }

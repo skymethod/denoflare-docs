@@ -1,4 +1,9 @@
-###### Denoflare
+---
+type: overview
+summary: Develop, test, and deploy Cloudflare Workers with Deno
+---
+
+# Denoflare
 Develop, test, and deploy <a href="https://workers.cloudflare.com" target="_blank">Cloudflare Workers</a> with <a href="https://deno.land" target="_blank">Deno</a>
 ###### Coming soon
 Documentation over at <a href="https://github.com/skymethod/denoflare" target="_blank">the Denoflare GitHub repo</a>
