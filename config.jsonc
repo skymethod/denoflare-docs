@@ -1,5 +1,7 @@
 {
     "product": "Denoflare",
+    "productRepo": "skymethod/denoflare",
+    "contentRepo": "skymethod/denoflare-docs",
     "themeColor": "#5f27ca",
     "themeColorDark": "#5f27ca",
     "siteMetadata": {
