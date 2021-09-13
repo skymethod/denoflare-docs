@@ -1,5 +1,6 @@
 {
     "product": "Denoflare",
+    "productSvg": "/images/logo-inline.svg",
     "productRepo": "skymethod/denoflare",
     "contentRepo": "skymethod/denoflare-docs",
     "themeColor": "#5f27ca",
@@ -9,5 +10,14 @@
         "description": "Develop, test, and deploy Cloudflare Workers with Deno.",
         "origin": "https://denoflare.dev",
         "twitterUsername": "@denoflare",
+        "image": "/images/og-image.1.png",
+        "imageAlt": "Denoflare screenshot",
+        "faviconIco": "/images/favicon.2.ico",
+        "faviconSvg": "/images/favicon.2.svg",
+        "faviconMaskSvg": "/images/favicon.2.svg",
+        "faviconMaskColor": "#cfabfd",
+        "manifest": {
+            "name": "Denoflare (denoflare.dev)",
+        },
     }
 }
