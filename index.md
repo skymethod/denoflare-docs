@@ -5,11 +5,12 @@ summary: Develop, test, and deploy Cloudflare Workers with Deno
 
 # Overview
 Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) with [Deno](https://deno.land)
-###### Coming soon
-Documentation over at [the Denoflare GitHub repo](https://github.com/skymethod/denoflare)
- <h6>Denoflare Tail · tail.denoflare.dev</h6>
-[Watch live requests and logs for your Cloudflare Workers in the browser!](https://tail.denoflare.dev)
-<img src="/tail.1.jpg">
+## Powered by Denoflare
+[tail.denoflare.dev · Watch live requests and logs for your Cloudflare Workers in the browser!](https://tail.denoflare.dev)
+
+<img src="tailweb.png" class="large-img" style="margin: auto">
+
+## Build env
 ```
 HOME=$HOME
 DENOFLARE_VERSION=$DENOFLARE_VERSION
