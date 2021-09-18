@@ -18,6 +18,7 @@ USAGE:
 FLAGS:
     -h, --help        Prints help information
         --verbose     Toggle verbose output (when applicable)
+        --watch       Re-upload the worker script when local changes are detected
 
 OPTIONS:
     -n, --name <name>        Name to use for Cloudflare Worker script [default: Name of script defined in .denoflare config, or https url basename sans extension]

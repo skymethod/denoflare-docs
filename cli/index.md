@@ -4,9 +4,11 @@ title: CLI
 ---
 
 # Denoflare Command-line interface
-Denoflare CLI is a standard Deno program, so it benefits from the permission model and installation flexibility of all Deno programs.
+Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits from the permission model and installation flexibility of all Deno programs.
 
 ## Installation
+Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.14.0/getting_started/installation)
+
 While Denoflare is still under active development, it's easiest to simply "install" it by defining a shell function in your shell config to a `deno run` command:
 
 ```bash
