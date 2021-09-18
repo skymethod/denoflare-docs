@@ -28,7 +28,7 @@ Metadata for the site should be saved to a config.jsonc or config.json file in t
         "description": "Description for page metadata",
         "origin": "https://fizzbuzz.dev",
         "twitterUsername": "@fizzbuzz",
-        "image": "/images/og-image.1.png",
+        "image": "/images/screenshot.v1.png",
         "imageAlt": "FizzBuzz screenshot",
         "faviconIco": "/images/favicon.2.ico",
         "faviconSvg": "/images/favicon.2.svg",
