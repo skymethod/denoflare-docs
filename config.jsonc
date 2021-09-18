@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/2ff222c5906cd6c9cab7301db2d243197f8ebb67/cli/site/site_config.schema.json",
     "product": "Denoflare",
     "productSvg": "/images/logo-inline.svg",
     "productRepo": "skymethod/denoflare",
@@ -19,5 +20,5 @@
         "manifest": {
             "name": "Denoflare (denoflare.dev)",
         },
-    }
+    },
 }
