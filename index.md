@@ -9,7 +9,7 @@ Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) w
 ## Denoflare CLI
 `denoflare` is a single cli tool to make developing and deploying Cloudflare Workers simple.
 
-No need for [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler), [Node](https://nodejs.org/en/), [npm](https://www.npmjs.com/), or [webpack](https://webpack.js.org/).
+No need for [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler), [Node](https://nodejs.org/en/), [npm](https://www.npmjs.com/), or [webpack](https://webpack.js.org/) 🤯 🤯 🤯 🤯
 
 Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.14.0/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.14.0/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.14.0/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.14.0/tools/bundler).
 
@@ -17,7 +17,7 @@ Denoflare can:
  - Give you first-class support for [ESM-based workers](https://developers.cloudflare.com/workers/learning/using-durable-objects#instantiating-and-communicating-with-a-durable-object)
  - Help you develop and test a worker, by running locally inside a permissionless Deno isolate, similar to the [Workers Runtime](https://developers.cloudflare.com/workers/runtime-apis)
    - see [denoflare serve](/cli/serve)
- - Deploy your javascript or typescript worker easily from a local script file, or from an https url
+ - Deploy your JavaScript or TypeScript worker easily from a local script file, or from an https: URL
    - see [denoflare push](/cli/push)
  - Monitor your workers in production from the command line
    - see [denoflare tail](/cli/tail)
