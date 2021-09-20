@@ -31,7 +31,6 @@ Specify your configuration in a jsonc file, and either
 				"foo": { "value": "bar" },
 			},
 			"localPort": 3002,
-			"localIsolation": "none"
 		},
 		"script2-local": {
 			"path": "/Users/me/path/to/script2.ts",
@@ -48,7 +47,7 @@ Specify your configuration in a jsonc file, and either
 			},
 			"localPort": 3031,
 			"localHostname": "test.example.com",
-			"localIsolation": "none"
+			"localIsolation": "isolate"
 		},
 		"script4-prod": {
 		    "path": "/Users/me/path/to/script4.ts",

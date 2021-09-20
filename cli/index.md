@@ -9,16 +9,29 @@ Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits fr
 ## Installation
 Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.14.0/getting_started/installation)
 
-While Denoflare is still under active development, it's easiest to simply "install" it by defining a shell function in your shell config to a `deno run` command:
+Install `denoflare` via standard [deno install](https://deno.land/manual@v1.13.2/tools/script_installer)
+```bash
+deno install --unstable --allow-read --allow-net --allow-env --name denoflare --force https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/cli/cli.ts
+```
+
+Alternatively, you can also "install" by defining a shell function in your shell config to a `deno run` command.
+This allows you to create multiple aliases with different permissions.
 
 ```bash
-# e.g. bash
+# in ~/.bash_profile
 function denoflare {
     deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/cli/cli.ts "$@"
 }
 ```
 
-You can also try [deno install](https://deno.land/manual@v1.13.2/tools/script_installer), and we'll start posting standard releases (via [deno compile](https://deno.land/manual@v1.13.2/tools/compiler)) when `denoflare` nears a stable feature set.
+Or, run without an install step at all, perhaps inside a CI build. Simply replace `denoflare` in our docs with the long-form `deno run` command.
+
+e.g. instead of `denoflare serve x`
+```bash
+deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/cli/cli.ts serve x
+```
+
+We'll start posting standard releases (via [deno compile](https://deno.land/manual@v1.13.2/tools/compiler)) when `denoflare` nears a stable feature set.
 
 Once `denoflare` is defined, the cli includes docs on each command.
 

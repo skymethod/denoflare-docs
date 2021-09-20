@@ -11,6 +11,8 @@ Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) w
 
 No need for [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler), [Node](https://nodejs.org/en/), [npm](https://www.npmjs.com/), or [webpack](https://webpack.js.org/) 🤯 🤯 🤯 🤯
 
+<Button type="primary" href="/cli">Install denoflare</Button>
+
 Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.14.0/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.14.0/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.14.0/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.14.0/tools/bundler).
 
 Denoflare can:
