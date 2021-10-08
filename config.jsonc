@@ -1,11 +1,15 @@
 {
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/cli/site/site_config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/0454bceedf13e302bb9d9fad336cee61c06c4af0/cli/site/site_config.schema.json",
     "product": "Denoflare",
     "productSvg": "/images/logo-inline.svg",
     "productRepo": "skymethod/denoflare",
     "contentRepo": "skymethod/denoflare-docs",
     "themeColor": "#5f27ca",
     "themeColorDark": "#5f27ca",
+    "search": {
+        "indexName": "denoflare",
+        "apiKey": "621b546213fb2a80262606433fa25859",
+    },
     "siteMetadata": {
         "title": "Denoflare",
         "description": "Develop, test, and deploy Cloudflare Workers with Deno.",
