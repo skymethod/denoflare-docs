@@ -41,7 +41,7 @@ Currently, webtail surfaces the following properties in its tail output, if prov
 Since it is a standard module-based Cloudflare Worker, you can deploy it like any other worker with `denoflare push`:
 
 ```bash
-denoflare push --name webtail https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/examples/webtail-worker/webtail_worker.ts
+denoflare push --name webtail https://raw.githubusercontent.com/skymethod/denoflare/v0.3.0/examples/webtail-worker/webtail_worker.ts
 ```
 
 ## Host it locally
@@ -49,5 +49,5 @@ denoflare push --name webtail https://raw.githubusercontent.com/skymethod/denofl
 Since it is a standard module-based Cloudflare Worker, you can serve it locally like any other worker with `denoflare serve`:
 
 ```bash
-denoflare serve https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/examples/webtail-worker/webtail_worker.ts
+denoflare serve https://raw.githubusercontent.com/skymethod/denoflare/v0.3.0/examples/webtail-worker/webtail_worker.ts
 ```

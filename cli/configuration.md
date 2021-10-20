@@ -19,7 +19,7 @@ Specify your configuration in a jsonc file, and either
 	// This jsonc file supports comments and trailing commas!
 
     // optional schema to get auto-completions when editing this file in vscode, etc
-	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.2.0/common/config.schema.json",
+	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.3.0/common/config.schema.json",
 
     // define script configurations by name, and their associated bindings and options
     // you can then simply refer to them by name in your denoflare commands
@@ -52,7 +52,7 @@ Specify your configuration in a jsonc file, and either
 		"script4-prod": {
 		    "path": "/Users/me/path/to/script4.ts",
 		    "bindings": {
-				"version": { "value": "0.2.0" },
+				"version": { "value": "0.3.0" },
 			},
 		},
 		"script4-local": {
