@@ -29,9 +29,9 @@ Denoflare can:
 [Learn more about the CLI](/cli)
 
 ## Deploy via files or URLs
-Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.3.0/examples/hello-worker/hello.ts) is trivial:
+Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.3.1/examples/hello-worker/hello.ts) is trivial:
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.3.0/examples/hello-worker/hello.ts
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.3.1/examples/hello-worker/hello.ts
 ```
 
 ## Roadmap
