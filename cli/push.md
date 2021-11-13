@@ -9,7 +9,7 @@ Upload a worker script to Cloudflare Workers
 ## --help
 ```
 $ denoflare push --help
-denoflare-push 0.3.1
+denoflare-push 0.3.2
 Upload a worker script to Cloudflare Workers
 
 USAGE:
