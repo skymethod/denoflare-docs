@@ -9,7 +9,7 @@ Run a worker script on a local web server
 ## --help
 ```
 $ denoflare serve --help
-denoflare-serve 0.3.2
+denoflare-serve 0.3.3
 Run a worker script on a local web server
 
 USAGE:

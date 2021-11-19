@@ -10,7 +10,7 @@ Generate static output for Cloudfare Pages
 ## --help
 ```
 $ denoflare site generate --help
-denoflare-site-generate 0.3.2
+denoflare-site-generate 0.3.3
 Generate static output for Cloudfare Pages
 
 USAGE:
