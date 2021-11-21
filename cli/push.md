@@ -4,10 +4,12 @@ summary: Upload a worker script to Cloudflare Workers
 ---
 
 # denoflare push
+
 Upload a worker script to Cloudflare Workers
 
 ## --help
-```
+
+```bash
 $ denoflare push --help
 denoflare-push 0.3.3
 Upload a worker script to Cloudflare Workers
@@ -28,3 +30,5 @@ OPTIONS:
 ARGS:
     <script-spec>    Name of script defined in .denoflare config, file path to bundled js worker, or an https url to a module-based worker .ts, e.g. https://path/to/worker.ts
 ```
+
+Learn how to use `denoflare serve` in the [Publish a Worker Guide](/guides/push).

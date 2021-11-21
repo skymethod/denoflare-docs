@@ -1,4 +1,5 @@
 ---
+order: 1
 summary: Get up and running with `denoflare serve`
 ---
 
@@ -21,7 +22,7 @@ Follow these steps to setup `denoflare serve` to run from a config file.  This a
     }
     ```
 
-2. Create a file named `.denoflare`. Paste in the following config config:
+2. Create a file named `.denoflare`. Paste in the following config:
 
     ```jsonc
     // .denoflare
@@ -30,11 +31,6 @@ Follow these steps to setup `denoflare serve` to run from a config file.  This a
         "scripts": {
             "hello-local": {
                 "path": "index.ts",
-                "bindings": {
-                    "foo": {
-                        "value": "bar"
-                    }
-                },
                 "localPort": 3030
             }
         },
