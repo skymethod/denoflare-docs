@@ -4,9 +4,11 @@ summary: Run a worker script on a local web server
 ---
 
 # denoflare serve
+
 Run a worker script on a local web server
 
 ## --help
+
 ```
 $ denoflare serve --help
 denoflare-serve 0.3.3
@@ -27,3 +29,5 @@ OPTIONS:
 ARGS:
     <script-spec>    Name of script defined in .denoflare config, file path to bundled js worker, or an https url to a module-based worker .ts, e.g. https://path/to/worker.ts
 ```
+
+Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/serve).
