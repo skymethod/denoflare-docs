@@ -48,3 +48,7 @@ These projects are known to have used `denoflare` for development.
 
 <img src="/images/webtail.png" class="large-img" style="margin: auto">
 
+## Support this project
+Contributions to help fund ongoing development of Denoflare are welcome and appreciated!
+
+<Button type="primary" href="https://buy.stripe.com/6oE7v22Q74nvakwaEE">Donate</Button>
