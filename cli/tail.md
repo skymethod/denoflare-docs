@@ -9,7 +9,7 @@ View a stream of logs from a published worker
 ## --help
 ```
 $ denoflare tail --help
-denoflare-tail 0.3.3
+denoflare-tail 0.4.0
 View a stream of logs from a published worker
 
 USAGE:

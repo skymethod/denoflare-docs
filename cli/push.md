@@ -11,7 +11,7 @@ Upload a worker script to Cloudflare Workers
 
 ```bash
 $ denoflare push --help
-denoflare-push 0.3.3
+denoflare-push 0.4.0
 Upload a worker script to Cloudflare Workers
 
 USAGE:

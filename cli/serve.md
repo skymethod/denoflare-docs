@@ -11,7 +11,7 @@ Run a worker script on a local web server
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.3.3
+denoflare-serve 0.4.0
 Run a worker script on a local web server
 
 USAGE:
