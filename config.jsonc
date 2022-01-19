@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/0454bceedf13e302bb9d9fad336cee61c06c4af0/cli/site/site_config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/c936c94d9958595ec64fa714a7ecdd073646d6b2/cli/site/site_config.schema.json",
     "product": "Denoflare",
     "productSvg": "/images/logo-inline.svg",
     "productRepo": "skymethod/denoflare",
@@ -9,6 +9,7 @@
     "search": {
         "indexName": "denoflare",
         "apiKey": "5bced8a6d7853b72ea065d87b56b8e0e",
+        "appId": "S6G990PAXD",
     },
     "siteMetadata": {
         "title": "Denoflare",
