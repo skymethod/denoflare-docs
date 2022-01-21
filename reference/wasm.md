@@ -21,7 +21,7 @@ To accomplish this, Denoflare provides a special function called `importWasm` th
 
 *worker.ts*
 ```ts
-import { importWasm } from 'https://raw.githubusercontent.com/skymethod/denoflare/v0.4.1/common/import_wasm.ts';
+import { importWasm } from 'https://raw.githubusercontent.com/skymethod/denoflare/v0.4.3/common/import_wasm.ts';
 const module = await importWasm(import.meta.url, './hello.wasm');
 // import module from './hello.wasm';
 // is the replacement used when pushing to Cloudflare

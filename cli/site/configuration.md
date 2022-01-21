@@ -15,7 +15,7 @@ Metadata for the site should be saved to a config.jsonc or config.json file in t
 	// This jsonc file supports comments and trailing commas!
 
     // optional schema to get auto-completions when editing this file in vscode, etc
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.4.1/cli/site/site_config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.4.3/cli/site/site_config.schema.json",
 
     "product": "FizzBuzz",
     "productSvg": "/images/logo-inline.svg",
