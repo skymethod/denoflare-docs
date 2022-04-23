@@ -10,7 +10,7 @@ Host static Cloudflare Pages site locally
 ## --help
 ```
 $ denoflare site serve --help
-denoflare-site-serve 0.4.1
+denoflare-site-serve 0.4.5
 Host static Cloudflare Pages site locally
 
 USAGE:

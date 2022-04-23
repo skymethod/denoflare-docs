@@ -11,7 +11,7 @@ Run a worker script on a local web server
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.4.1
+denoflare-serve 0.4.5
 Run a worker script on a local web server
 
 USAGE:
@@ -22,9 +22,11 @@ FLAGS:
         --verbose     Toggle verbose output (when applicable)
 
 OPTIONS:
-        --port <number>     Local port to use for the http server (default: 8080)
-        --profile <name>    Name of profile to load from config (default: only profile or default profile in config)
-        --config <path>     Path to config file (default: .denoflare in cwd or parents)
+        --port <number>      Local port to use for the http server (default: 8080)
+        --cert-pem <path>    (required for https) Path to certificate file in pem format (contents start with -----BEGIN CERTIFICATE-----)
+        --key-pem <path>     (required for https) Path to private key file in pem format (contents start with -----BEGIN PRIVATE KEY-----)
+        --profile <name>     Name of profile to load from config (default: only profile or default profile in config)
+        --config <path>      Path to config file (default: .denoflare in cwd or parents)
 
 ARGS:
     <script-spec>    Name of script defined in .denoflare config, file path to bundled js worker, or an https url to a module-based worker .ts, e.g. https://path/to/worker.ts

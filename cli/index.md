@@ -8,12 +8,12 @@ Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits fr
 
 ## Installation
 
-Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.14.3/getting_started/installation)
+Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.21.0/getting_started/installation)
 
-Install `denoflare` via standard [deno install](https://deno.land/manual@v1.14.3/tools/script_installer)
+Install `denoflare` via standard [deno install](https://deno.land/manual@v1.21.0/tools/script_installer)
 
 ```bash
-deno install --unstable --allow-read --allow-net --allow-env --name denoflare --force https://raw.githubusercontent.com/skymethod/denoflare/v0.4.4/cli/cli.ts
+deno install --unstable --allow-read --allow-net --allow-env --name denoflare --force https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/cli/cli.ts
 ```
 
 Alternatively, you can also "install" by defining a shell function in your shell config to a `deno run` command.
@@ -22,7 +22,7 @@ This allows you to create multiple aliases with different permissions.
 ```bash
 # in ~/.bash_profile
 function denoflare {
-    deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.4.4/cli/cli.ts "$@"
+    deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/cli/cli.ts "$@"
 }
 ```
 
@@ -31,10 +31,10 @@ Or, run without an install step at all, perhaps inside a CI build. Simply replac
 e.g. instead of `denoflare serve x`
 
 ```bash
-deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.4.4/cli/cli.ts serve x
+deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/cli/cli.ts serve x
 ```
 
-We'll start posting standard releases (via [deno compile](https://deno.land/manual@v1.14.3/tools/compiler)) when `denoflare` nears a stable feature set.
+We'll start posting standard releases (via [deno compile](https://deno.land/manual@v1.21.0/tools/compiler)) when `denoflare` nears a stable feature set.
 
 Once `denoflare` is defined, the cli includes docs on each command.
 
@@ -42,18 +42,20 @@ Once `denoflare` is defined, the cli includes docs on each command.
 
 ```bash
 $ denoflare --help
-denoflare 0.4.1
+denoflare 0.4.5
 
 USAGE:
     denoflare [command] [FLAGS] [OPTIONS] [args]
 
 COMMANDS:
+```
 
-```bash
  - [serve](/cli/serve) - Run a worker script on a local web server
  - [push](/cli/push) - Upload a worker script to Cloudflare Workers
  - [tail](/cli/tail) - View a stream of logs from a published worker
  - [site](/cli/site) - Develop and deploy a static docs site to Cloudflare Pages
+ - analytics - Dump stats via the Cloudflare GraphQL Analytics API
+ - cfapi - Call the Cloudflare REST API
  - version - Dump cli version
 
 ```bash
