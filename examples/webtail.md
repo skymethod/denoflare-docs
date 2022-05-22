@@ -4,7 +4,11 @@ summary: View live requests and logs from Cloudflare Workers from the comfort of
 
 # Webtail for Cloudflare Workers
 
+<Aside>
+
 Hosted version: https://webtail.denoflare.dev
+
+</Aside>
 
 View live requests and logs from Cloudflare Workers from the comfort of your browser. 
 A few enhancements over what's provided by default in the Cloudflare dashboard:
@@ -40,14 +44,16 @@ Currently, webtail surfaces the following properties in its tail output, if prov
 
 Since it is a standard module-based Cloudflare Worker, you can deploy it like any other worker with `denoflare push`:
 
-```bash
-denoflare push --name webtail https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/examples/webtail-worker/webtail_worker.ts
+```
+denoflare push --name webtail \
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/webtail-worker/webtail_worker.ts
 ```
 
 ## Host it locally
 
 Since it is a standard module-based Cloudflare Worker, you can serve it locally like any other worker with `denoflare serve`:
 
-```bash
-denoflare serve https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/examples/webtail-worker/webtail_worker.ts
+```
+denoflare serve \
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/webtail-worker/webtail_worker.ts
 ```

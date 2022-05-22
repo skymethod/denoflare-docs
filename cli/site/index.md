@@ -26,24 +26,31 @@ Use `denoflare site generate` inside a custom build.
   - Build output directory: `/output`
 
 - Create the `build.sh` file in the root of your content repo, for example:
+
 ```
 #!/bin/sh
-DENO_VERSION="v1.21.0"
-DENOFLARE_VERSION="v0.4.5"
+DENO_VERSION="v1.22.0"
+DENOFLARE_VERSION="v0.5.0"
 curl -fsSL https://deno.land/x/install/install.sh | DENO_INSTALL=./deno-$DENO_VERSION sh -s $DENO_VERSION
-NO_COLOR=1 DENO_VERSION=$DENO_VERSION DENOFLARE_VERSION=${DENOFLARE_VERSION} ./deno-$DENO_VERSION/bin/deno run --unstable --allow-all https://raw.githubusercontent.com/skymethod/denoflare/$DENOFLARE_VERSION/cli/cli.ts site generate . ./output --verbose
+NO_COLOR=1 DENO_VERSION=$DENO_VERSION DENOFLARE_VERSION=${DENOFLARE_VERSION} \
+    ./deno-$DENO_VERSION/bin/deno run --unstable --allow-all \
+    https://raw.githubusercontent.com/skymethod/denoflare/$DENOFLARE_VERSION/cli/cli.ts \
+    site generate . ./output --verbose
 ```
 
 ## --help
 ```
 $ denoflare site --help
-denoflare-site 0.4.5
+denoflare-site 0.4.5+
+
 Develop and deploy a static docs site to Cloudflare Pages
 
 USAGE:
-    denoflare site [subcommand] [FLAGS] [OPTIONS] [args]
+    denoflare site <subcommand> <args> <options>
 
 SUBCOMMANDS:
+    [generate](/cli/site/generate)   Develop and deploy a static docs site to Cloudflare Pages
+    [serve](/cli/site/serve)      Host a static Cloudflare Pages site in a local Deno web server
+
+For subcommand-specific help: denoflare site <subcommand> --help
 ```
- - [generate](/cli/site/generate) - Generate static output for Cloudfare Pages
- - [serve](/cli/site/serve) - Host static Cloudflare Pages site locally

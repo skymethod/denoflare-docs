@@ -1,13 +1,14 @@
 ---
 order: 1
 summary: WebAssembly/WASM with Denoflare
+type: overview
 ---
 
 # WebAssembly/WASM
 
 Cloudflare Workers supports running small WebAssembly modules within either [script-based](https://blog.cloudflare.com/webassembly-on-cloudflare-workers/) or [module-based](https://blog.cloudflare.com/workers-javascript-modules/#are-there-non-javascript-modules) workers.
 
-Denoflare provides a simple way to serve and deploy workers with WebAssembly components, building on Deno's [built-in WebAssembly support](https://deno.land/manual@v1.21.0/webassembly).
+Denoflare provides a simple way to serve and deploy workers with WebAssembly components, building on Deno's [built-in WebAssembly support](https://deno.land/manual@v1.22.0/webassembly).
 
 ## Module-based workers
 
@@ -21,7 +22,7 @@ To accomplish this, Denoflare provides a special function called `importWasm` th
 
 *worker.ts*
 ```ts
-import { importWasm } from 'https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/common/import_wasm.ts';
+import { importWasm } from 'https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/common/import_wasm.ts';
 const module = await importWasm(import.meta.url, './hello.wasm');
 // import module from './hello.wasm';
 // is the replacement used when pushing to Cloudflare

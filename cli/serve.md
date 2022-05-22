@@ -1,35 +1,56 @@
 ---
 order: 1
-summary: Run a worker script on a local web server
+summary: Run a Cloudflare worker script in a local Deno web server
+type: overview
 ---
 
 # denoflare serve
 
-Run a worker script on a local web server
+Run a Cloudflare worker script inside a local Deno web server for development and testing.
+
+Supports hot-reloading by default, any script change will be picked up and available immediately.
+
+<Aside>
+
+Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/serve).
+
+</Aside>
 
 ## --help
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.4.5
-Run a worker script on a local web server
+denoflare-serve 0.4.5+
+
+Run a Cloudflare worker script in a local Deno web server
 
 USAGE:
-    denoflare serve [FLAGS] [OPTIONS] [--] [script-spec]
-
-FLAGS:
-    -h, --help        Prints help information
-        --verbose     Toggle verbose output (when applicable)
-
-OPTIONS:
-        --port <number>      Local port to use for the http server (default: 8080)
-        --cert-pem <path>    (required for https) Path to certificate file in pem format (contents start with -----BEGIN CERTIFICATE-----)
-        --key-pem <path>     (required for https) Path to private key file in pem format (contents start with -----BEGIN PRIVATE KEY-----)
-        --profile <name>     Name of profile to load from config (default: only profile or default profile in config)
-        --config <path>      Path to config file (default: .denoflare in cwd or parents)
+    denoflare serve <script-spec> [OPTIONS]
 
 ARGS:
-    <script-spec>    Name of script defined in .denoflare config, file path to bundled js worker, or an https url to a module-based worker .ts, e.g. https://path/to/worker.ts
-```
+    <script-spec>                                               Name of script defined in .denoflare config, file path to bundled js worker, or an https url to a module-based worker .ts, e.g. https://path/to/worker.ts
 
-Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/serve).
+OPTIONS:
+    --port <number>                                             Local port to use for the http(s) server (default: 8080)
+    --cert-pem <path>                                           (required for https) Path to certificate file in pem format (contents start with -----BEGIN CERTIFICATE-----)
+    --key-pem <path>                                            (required for https) Path to private key file in pem format (contents start with -----BEGIN PRIVATE KEY-----)
+    --name <string>                                             Explicit script name to use from config file
+                                                                
+    --text-binding <name:plain-text>...                         Plain text environment variable binding, overrides config
+    --secret-binding <name:secret-text>...                      Secret text environment variable binding, overrides config
+    --kv-namespace-binding <name:namespace-id>...               KV namespace environment variable binding, overrides config
+    --do-namespace-binding <name:namespace-name:class-name>...  DO namespace environment variable binding, overrides config
+    --wasm-module-binding <name:path-to-local-wasm-file>...     WASM module environment variable binding, overrides config
+    --service-binding <name:service:environment>...             Service environment variable binding, overrides config
+    --r2-bucket-binding <name:bucket-name>...                   R2 bucket environment variable binding, overrides config
+                                                                
+    --config <path>                                             Path to config file (default: .denoflare in cwd or parents)
+    --profile <name>                                            Explicit profile to use from config file
+    --account-id <string>                                       Explicit Cloudflare account id to use for authentication
+    --api-token <string>                                        Explicit Cloudflare API token to use for authentication
+                                                                
+    --bundle <name=value>...                                    Advanced options used when emitting javascript bundles: backend=(process, module)
+                                                                
+    --help                                                      Print help information
+    --verbose                                                   Toggle verbose output (when applicable)
+```

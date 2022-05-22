@@ -23,7 +23,7 @@ enviroment variable binding named `SUFFIX`:
     ```jsonc
     // .denoflare
     {
-        "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/common/config.schema.json",
+        "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/common/config.schema.json",
         "scripts": {
             "complimenter": {
                 "path": "index.ts",
@@ -78,7 +78,7 @@ enviroment variable binding named `SUFFIX`:
 
 4. It's time to publish this code to Cloudflare. Just run `denoflare push complimenter`.  You'll see some output like this:
 
-   ```bash
+   ```
    bundling complimenter into bundle.js...
    bundle finished in 142ms
    computed bindings in 0ms
@@ -98,7 +98,7 @@ enviroment variable binding named `SUFFIX`:
 5. Let's now publish the worker using a name other than the script name of `complimenter`.  The `denoflare push` command supports the
 `--name` option to explicitly provide a name.
 
-   ```bash
+   ```
    denoflare push complimenter --name genius
    ```
 
@@ -109,7 +109,7 @@ enviroment variable binding named `SUFFIX`:
 Denoflare to push the code every time a file changes.  This can be used with or without the `--name` option.  Here's what it looks like
 without:
 
-   ```bash
+   ```
    denoflare push complimenter --watch
    ```
 

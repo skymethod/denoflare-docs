@@ -6,6 +6,14 @@ summary: Develop, test, and deploy Cloudflare Workers with Deno
 # Overview
 Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) with [Deno](https://deno.land)
 
+<Aside header="New in v0.5.0">
+
+Support for [Cloudflare R2](https://developers.cloudflare.com/r2/)
+
+[Learn more about Denoflare’s support for R2](/r2)
+
+</Aside>
+
 ## Denoflare CLI
 `denoflare` is a single cli tool to make developing and deploying Cloudflare Workers simple.
 
@@ -13,13 +21,13 @@ No need for [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler), 
 
 <Button type="primary" href="/cli">Install denoflare</Button>
 
-Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.21.0/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.21.0/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.21.0/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.21.0/tools/bundler).
+Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.22.0/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.22.0/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.22.0/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.22.0/tools/bundler).
 
 Denoflare can:
  - Give you first-class support for [ESM-based workers](https://developers.cloudflare.com/workers/learning/using-durable-objects#instantiating-and-communicating-with-a-durable-object)
  - Help you develop and test a worker, by running locally inside a permissionless Deno isolate, similar to the [Workers Runtime](https://developers.cloudflare.com/workers/runtime-apis)
    - see [denoflare serve](/cli/serve)
- - Deploy your JavaScript or TypeScript worker easily from a local script file, or from an https: URL
+ - Deploy your JavaScript or TypeScript worker to Cloudflare easily from a local script file, or from an https: URL
    - see [denoflare push](/cli/push)
  - Monitor your workers in production from the command line
    - see [denoflare tail](/cli/tail)
@@ -29,9 +37,9 @@ Denoflare can:
 [Learn more about the CLI](/cli)
 
 ## Deploy via files or URLs
-Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.4.5/examples/hello-worker/hello.ts) is trivial:
+Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.5.0/examples/hello-worker/hello.ts) is trivial:
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/examples/hello-worker/hello.ts
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/hello-worker/hello.ts
 ```
 
 ## Roadmap

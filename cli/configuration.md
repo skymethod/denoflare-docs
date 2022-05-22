@@ -2,6 +2,7 @@
 order: 0
 summary: How to configure the Denoflare CLI
 title: Configuration
+type: overview
 ---
 
 # .denoflare Configuration File
@@ -12,7 +13,8 @@ Most commands can be run using CLI options, often it's easier to specify `profil
 
 There are two ways to use the Denoflare CLI with a configuration file:
 
-- The CLI will automatically look for a `.denoflare` file in the current directory.
+- The CLI will automatically look for a `.denoflare` file in the current directory, or any parent directory.
+- Placing a shared `.denoflare` file in your home directory is an easy way to centralize all of your config.
 - You can specify a config file in another directory using the `--config` flag with an absolute path: e.g. `denoflare --config /path/to/my-config.jsonc`
 
 ## Example .denoflare File
@@ -22,7 +24,7 @@ There are two ways to use the Denoflare CLI with a configuration file:
     // This jsonc file supports comments and trailing commas!
 
     // optional schema to get auto-completions when editing this file in vscode, etc
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/common/config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/common/config.schema.json",
 
     // define script configurations by name, and their associated bindings and options
     // you can then simply refer to them by name in your denoflare commands
@@ -57,6 +59,7 @@ There are two ways to use the Denoflare CLI with a configuration file:
             "bindings": {
                 "version": { "value": "1.2.3" },
             },
+            "customDomains": [ "production.example.com" ],
         },
         "script4-local": {
             "path": "/Users/me/path/to/script4.ts", // same script, different binding value
@@ -67,7 +70,7 @@ There are two ways to use the Denoflare CLI with a configuration file:
     },
 
     // define one or more named profiles to specify Cloudflare API token credentials
-    // you can then simply refer to them by name in your denoflare commands, using --profile <profile-name>
+    // you can then refer to them by name in your denoflare commands, using --profile <profile-name>
     // or if no --profile is specified, the default profile will be used
     // the default profile is either the only profile specified (as shown here), or the one marked with default: true
     "profiles": {
@@ -82,7 +85,7 @@ There are two ways to use the Denoflare CLI with a configuration file:
 ## Full Configuration Format
 
 The Denoflare configuration object is typically saved in a `.denoflare` file.
-The top-level object supports two keys:
+The top-level object supports two properties:
 
 - `scripts` is keyed by the name of each [Script](#script).
 - `profiles` is keyed by the name of each [Profile](#profile).
@@ -118,7 +121,7 @@ export interface Config {
 ### Script
 
 The [top-level](#full-configuration-format) `scripts` object is keyed by the name of each script. Each script configuration object supports
-the following keys:
+the following properties:
 
 ```ts
 export interface Script {
@@ -142,10 +145,28 @@ export interface Script {
      * (Default: 'isolate') */
     readonly localIsolation?: Isolation;
 
+    /** If specified, use this certificate file when running `serve`, the local dev server, with https. */
+    readonly localCertPem?: string;
+
+    /** If specified, use this private key file when running `serve`, the local dev server, with https. */
+    readonly localKeyPem?: string;
+
     /** If specified, use a specific, named Profile defined in `config.profiles`.
      *
      * (Default: the Profile marked as `default`, or the only Profile defined) */
     readonly profile?: string;
+
+    /** Cloudflare Worker usage model: bundled or unbound.
+     * 
+     * See https://developers.cloudflare.com/workers/platform/pricing#usage-models
+     */
+    readonly usageModel?: UsageModel;
+
+    /** Custom domain(s) on which to bind this worker when deploying to Cloudflare.
+     * 
+     * See https://blog.cloudflare.com/custom-domains-for-workers/
+     */
+    readonly customDomains?: string[];
 }
 
 /** Code isolation to use when running worker scripts with `serve`, the local dev server.
@@ -161,11 +182,11 @@ export type Isolation = 'none' | 'isolate';
 ### Bindings
 
 Each [Script](#script) can have a bindings object which is keyed by binding name. Bindings give access to Environment
-Variables as well as Workers KV and Durable Object namespaces.
+Variables as well as Workers KV and Durable Object namespaces, Service Bindings, WASM Modules, and R2 Buckets.
 
 ```ts
 /** Binding definition for a worker script environment variable */
-export type Binding = TextBinding | SecretBinding | KVNamespaceBinding | DONamespaceBinding;
+export type Binding = TextBinding | SecretBinding | KVNamespaceBinding | DONamespaceBinding | WasmModuleBinding | ServiceBinding | R2BucketBinding;
 
 /** Plain-text environment variable binding */
 export interface TextBinding {
@@ -203,6 +224,27 @@ export interface DONamespaceBinding {
      * - `local:<DOClassName>`: Pointer to a Durable Object class name defined in the same worker script. e.g. `local:MyCounterDO`
      */
     readonly doNamespace: string;
+}
+
+/** Wasm module environment variable binding */
+export interface WasmModuleBinding {
+
+    /** Absolute file path to wasm module */
+    readonly wasmModule: string;
+}
+
+/** Service environment variable binding */
+export interface ServiceBinding {
+
+    /** The service and environment, delimited by ':'.  e.g. my-service:production */
+    readonly serviceEnvironment: string;
+}
+
+/** R2 environment variable binding */
+export interface R2BucketBinding {
+
+    /** The R2 bucket name */
+    readonly bucketName: string;
 }
 ```
 

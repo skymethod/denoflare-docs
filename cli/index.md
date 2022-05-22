@@ -1,6 +1,7 @@
 ---
 summary: Develop, test, and deploy Cloudflare Workers with Deno
 title: CLI
+type: overview
 ---
 # Denoflare Command-line Interface
 
@@ -8,21 +9,27 @@ Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits fr
 
 ## Installation
 
-Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.21.0/getting_started/installation)
+Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.22.0/getting_started/installation)
 
 Install `denoflare` via standard [deno install](https://deno.land/manual@v1.21.0/tools/script_installer)
 
-```bash
-deno install --unstable --allow-read --allow-net --allow-env --name denoflare --force https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/cli/cli.ts
+```
+deno install --unstable --allow-read --allow-net --allow-env --allow-run --name denoflare --force \
+https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/cli/cli.ts
 ```
 
-Alternatively, you can also "install" by defining a shell function in your shell config to a `deno run` command.
+<details>
+<summary>Alternatives: shell function or no-install direct run command for CI build</summary>
+<div>
+
+You can also "install" by defining a shell function in your shell config to a `deno run` command.
 This allows you to create multiple aliases with different permissions.
 
 ```bash
 # in ~/.bash_profile
 function denoflare {
-    deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/cli/cli.ts "$@"
+    deno run --unstable --allow-read --allow-net --allow-env --allow-run \
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/cli/cli.ts "$@"
 }
 ```
 
@@ -30,36 +37,43 @@ Or, run without an install step at all, perhaps inside a CI build. Simply replac
 
 e.g. instead of `denoflare serve x`
 
-```bash
-deno run --unstable --allow-read --allow-net --allow-env https://raw.githubusercontent.com/skymethod/denoflare/v0.4.5/cli/cli.ts serve x
+```
+deno run --unstable --allow-read --allow-net --allow-env--allow-run \
+https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/cli/cli.ts serve x
 ```
 
-We'll start posting standard releases (via [deno compile](https://deno.land/manual@v1.21.0/tools/compiler)) when `denoflare` nears a stable feature set.
+</div>
+</details>
 
-Once `denoflare` is defined, the cli includes docs on each command.
+We'll start posting standard binary releases (via [deno compile](https://deno.land/manual@v1.22.0/tools/compiler)) when `denoflare` nears a stable feature set.
+
+## Command help
+Once `denoflare` is installed, the cli includes docs on each command and subcommand, available via `--help`.
+
+<Aside>
+Each subcommand below also links to its own dedicated help page, if available.
+</Aside>
 
 ## --help
 
-```bash
+```
 $ denoflare --help
-denoflare 0.4.5
+denoflare 0.4.5+
 
 USAGE:
-    denoflare [command] [FLAGS] [OPTIONS] [args]
+    denoflare <command> <args> <options>
 
 COMMANDS:
-```
+    [serve](/cli/serve)      Run a Cloudflare worker script in a local Deno web server
+    [push](/cli/push)       Upload a Cloudflare worker script to Cloudflare
+    [tail](/cli/tail)       View a real-time stream of logs from a published Cloudflare worker
+    [site](/cli/site)       Develop and deploy a static docs site to Cloudflare Pages
+    analytics  Dump stats via the Cloudflare GraphQL Analytics API
+    cfapi      Call the Cloudflare REST API
+    r2         Manage Cloudflare R2 storage using the S3 compatibility API
+    version    Dump cli version
 
- - [serve](/cli/serve) - Run a worker script on a local web server
- - [push](/cli/push) - Upload a worker script to Cloudflare Workers
- - [tail](/cli/tail) - View a stream of logs from a published worker
- - [site](/cli/site) - Develop and deploy a static docs site to Cloudflare Pages
- - analytics - Dump stats via the Cloudflare GraphQL Analytics API
- - cfapi - Call the Cloudflare REST API
- - version - Dump cli version
-
-```bash
-For command-specific help: denoflare [command] --help
+For command-specific help: denoflare <command> --help
 ```
 
 ## Next Steps?
