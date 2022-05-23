@@ -1,6 +1,6 @@
 ---
 order: 2
-summary: Generate static output for Cloudfare Pages
+summary: Develop and deploy a static docs site to Cloudflare Pages
 title: denoflare site generate
 type: overview
 ---

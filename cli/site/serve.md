@@ -1,6 +1,6 @@
 ---
 order: 3
-summary: Host static Cloudflare Pages site locally
+summary: Host a static Cloudflare Pages site in a local Deno web server
 title: denoflare site serve
 type: overview
 ---

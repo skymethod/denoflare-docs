@@ -1,6 +1,6 @@
 ---
 order: 2
-summary: Upload a worker script to Cloudflare Workers
+summary: Upload a Cloudflare worker script to Cloudflare
 type: overview
 ---
 

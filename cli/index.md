@@ -47,6 +47,8 @@ https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/cli/cli.ts serve x
 
 We'll start posting standard binary releases (via [deno compile](https://deno.land/manual@v1.22.0/tools/compiler)) when `denoflare` nears a stable feature set.
 
+Check out the [Releases](https://github.com/skymethod/denoflare/releases) page for the latest version number tag, and details about each pre-release.
+
 ## Command help
 Once `denoflare` is installed, the cli includes docs on each command and subcommand, available via `--help`.
 
@@ -68,9 +70,9 @@ COMMANDS:
     [push](/cli/push)       Upload a Cloudflare worker script to Cloudflare
     [tail](/cli/tail)       View a real-time stream of logs from a published Cloudflare worker
     [site](/cli/site)       Develop and deploy a static docs site to Cloudflare Pages
-    analytics  Dump stats via the Cloudflare GraphQL Analytics API
-    cfapi      Call the Cloudflare REST API
-    r2         Manage Cloudflare R2 storage using the S3 compatibility API
+    [analytics](/cli/analytics)  Dump stats via the Cloudflare GraphQL Analytics API
+    [cfapi](/cli/cfapi)      Call the Cloudflare REST API
+    [r2](/cli/r2)         Manage Cloudflare R2 storage using the S3 compatibility API
     version    Dump cli version
 
 For command-specific help: denoflare <command> --help

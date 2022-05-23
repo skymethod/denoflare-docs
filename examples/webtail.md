@@ -51,7 +51,7 @@ denoflare push --name webtail \
 
 ## Host it locally
 
-Since it is a standard module-based Cloudflare Worker, you can serve it locally like any other worker with `denoflare serve`:
+Since it is a standard module-based Cloudflare Worker, you can run it locally like any other worker with `denoflare serve`:
 
 ```
 denoflare serve \

@@ -1,6 +1,6 @@
 ---
 order: 3
-summary: View a stream of logs from a published worker
+summary: View a real-time stream of logs from a published Cloudflare worker
 type: overview
 ---
 
