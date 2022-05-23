@@ -1,10 +1,10 @@
 ---
-summary: Easily make your R2 bucket publicly-readable on your domain.
+summary: Easily make your R2 bucket publicly-readable on your own domain.
 title: R2 Public Read
 order: 3
 ---
 
-# Easily make your R2 bucket publicly-readable on your domain
+# Easily make your R2 bucket publicly-readable on your own domain
 
 R2 has an [S3-compatible API](https://developers.cloudflare.com/r2/platform/s3-compatibility/api/), but does not yet support the public-read ACL, although it is on their roadmap.
 
@@ -44,6 +44,8 @@ You can limit these permissions to the target zone(s) for this worker.
 
 </div>
 </details>
+
+5. A working installation of [Deno](https://deno.land) and `denoflare` (see [installation](/cli#installation))
 
 ## Deploy it to your own account
 
@@ -111,13 +113,15 @@ With the following `~/.denoflare.jsonc`
 
 ```jsonc
 {
-	// This file supports comments!
+	// For auto-completion!
 	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/common/config.schema.json",
 
     // Named worker script configurations
 	"scripts": {
 
+        // worker name
         "my-bucket-public-read": {
+
             // path can also be a local file path if you've modified the worker locally
             "path": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/r2-public-read-worker/worker.ts",
 

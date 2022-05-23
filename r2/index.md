@@ -24,7 +24,7 @@ R2 has an [S3-compatible API](https://developers.cloudflare.com/r2/platform/s3-c
 
 In the meantime, since making a bucket public for reading is so common, we've made an open-source utility worker available to do this. It's a single one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
 
-<Button type="primary" href="/cli">Learn more</Button>
+<Button type="primary" href="/examples/r2-public-read">Learn more</Button>
 
 ## Easily make your R2 bucket readable via presigned URLs
 
@@ -33,7 +33,7 @@ Another common use-case for cloud storage is to make files available, but only t
 This feature will eventually be supported in R2 directly, but in the meantime, we've made another open-source utility worker available to support this. 
 Set up access with `denoflare r2 generate-credentials`, then a one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
 
-<Button type="primary" href="/cli">Learn more</Button>
+<Button type="primary" href="/examples/r2-presigned-urls">Learn more</Button>
 
 ## Track R2 costs and usage
 
