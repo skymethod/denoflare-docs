@@ -1,5 +1,6 @@
 ---
 summary: Example projects made with Denoflare
+order: 3
 ---
 
 # Examples

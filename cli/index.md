@@ -2,6 +2,7 @@
 summary: Develop, test, and deploy Cloudflare Workers with Deno
 title: CLI
 type: overview
+order: 2
 ---
 # Denoflare Command-line Interface
 

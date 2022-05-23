@@ -1,5 +1,6 @@
 ---
 summary: Get started using Denoflare
+order: 5
 ---
 
 # Guides
