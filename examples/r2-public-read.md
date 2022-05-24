@@ -12,7 +12,7 @@ In the meantime, since making a bucket public for reading is so common, we've ma
 
 ## Features
 
-This [open-source worker](https://github.com/skymethod/denoflare/v0.5.0/examples/r2-public-read-worker) makes a single R2 bucket available via public-read with the following features:
+This [open-source worker](https://github.com/skymethod/denoflare/tree/v0.5.0/examples/r2-public-read-worker) makes a single R2 bucket available via public-read with the following features:
  - Supports conditional requests, range requests, and objects stored with pre-existing content-encoding
  - (optional) Input flag to enable directory listing as html, with a configurable page limit
  - (optional) Input flag to enable routing similar to [Cloudflare Pages](https://developers.cloudflare.com/pages/), `index.html` served for directories, root level `404.html` etc

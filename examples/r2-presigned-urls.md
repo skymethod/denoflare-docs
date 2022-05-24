@@ -14,7 +14,7 @@ Set up access with `denoflare r2 generate-credentials`, then a one-time `denofla
 
 ## Features
 
-This [open-source worker](https://github.com/skymethod/denoflare/v0.5.0/examples/r2-presigned-url-worker) makes a single R2 bucket available via presigned URLs with the following features:
+This [open-source worker](https://github.com/skymethod/denoflare/tree/v0.5.0/examples/r2-presigned-url-worker) makes a single R2 bucket available via presigned URLs with the following features:
  - Supports conditional requests, range requests, and objects stored with pre-existing content-encoding
  - Use privately-generated credentials for your users, _not_ your actual Cloudflare credentials
  - (optional) Allow/deny ip lists

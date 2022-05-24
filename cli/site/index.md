@@ -41,7 +41,7 @@ NO_COLOR=1 DENO_VERSION=$DENO_VERSION DENOFLARE_VERSION=${DENOFLARE_VERSION} \
 ## --help
 ```
 $ denoflare site --help
-denoflare-site 0.4.5+
+denoflare-site 0.5.0
 
 Develop and deploy a static docs site to Cloudflare Pages
 

@@ -18,7 +18,7 @@ Hosted version: https://image-demo.denoflare.dev/
 
 Sample input images come from [Unsplash](https://unsplash.com/).
 
-Source is available in the [Denoflare repo](https://github.com/skymethod/denoflare/v0.5.0/examples/image-demo-worker).
+Source is available in the [Denoflare repo](https://github.com/skymethod/denoflare/tree/v0.5.0/examples/image-demo-worker).
 
 ## Deploy it to your own account
 

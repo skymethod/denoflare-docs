@@ -61,7 +61,7 @@ Each subcommand below also links to its own dedicated help page, if available.
 
 ```
 $ denoflare --help
-denoflare 0.4.5+
+denoflare 0.5.0
 
 USAGE:
     denoflare <command> <args> <options>
