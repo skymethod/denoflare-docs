@@ -6,7 +6,7 @@ summary: Develop, test, and deploy Cloudflare Workers with Deno
 # Overview
 Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) with [Deno](https://deno.land)
 
-<Aside header="New in v0.5.0">
+<Aside header="New in v0.5.1">
 
 Support for [Cloudflare R2](https://developers.cloudflare.com/r2/)
 
@@ -43,9 +43,9 @@ Denoflare can:
 [Learn more about the CLI](/cli)
 
 ## Deploy via files or URLs
-Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.5.0/examples/hello-worker/hello.ts) is trivial:
+Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.5.1/examples/hello-worker/hello.ts) is trivial:
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/hello-worker/hello.ts
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.1/examples/hello-worker/hello.ts
 ```
 
 ## Roadmap

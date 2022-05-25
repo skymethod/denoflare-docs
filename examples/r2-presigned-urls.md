@@ -14,7 +14,7 @@ Set up access with `denoflare r2 generate-credentials`, then a one-time `denofla
 
 ## Features
 
-This [open-source worker](https://github.com/skymethod/denoflare/tree/v0.5.0/examples/r2-presigned-url-worker) makes a single R2 bucket available via presigned URLs with the following features:
+This [open-source worker](https://github.com/skymethod/denoflare/tree/v0.5.1/examples/r2-presigned-url-worker) makes a single R2 bucket available via presigned URLs with the following features:
  - Supports conditional requests, range requests, and objects stored with pre-existing content-encoding
  - Use privately-generated credentials for your users, _not_ your actual Cloudflare credentials
  - (optional) Allow/deny ip lists
@@ -70,7 +70,7 @@ Let's say your your Cloudflare account id is `f2601bf4d2d5ddcb17981afe4db16dd2`,
 You can make this bucket available (for reading) at `my-bucket.my-domain.com` with the following command:
 
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/r2-presigned-url-worker/worker.ts \
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.1/examples/r2-presigned-url-worker/worker.ts \
    --name my-bucket-presigned-urls \
    --r2-bucket-binding bucket:my-bucket \
    --secret-binding credentials:b7fa983c14b8acaa85ed761edce0d1e1:859c95572351d6bac3f53a0431b3be33d5833aa39a9928176e008d60be340e70 \
@@ -99,7 +99,7 @@ Your signing tool must support setting a custom endpoint url, which should be se
 
 ## Configuration
 
-The worker takes [seven environment variables](https://github.com/skymethod/denoflare/blob/v0.5.0/examples/r2-presigned-url-worker/worker_env.d.ts)
+The worker takes [seven environment variables](https://github.com/skymethod/denoflare/blob/v0.5.1/examples/r2-presigned-url-worker/worker_env.d.ts)
  - `bucket`: (required) Your r2 bucket name
  - `credentials`: (required) Comma-separated user credentials, where each credential is a colon-delimited keypair of `accessKeyId`:`secretAccessKey`.
 
@@ -124,7 +124,7 @@ As with any Denoflare script, you can specify the environment variable bindings 
 The following are equivalent:
 
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/r2-presigned-url-worker/worker.ts \
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.1/examples/r2-presigned-url-worker/worker.ts \
    --name my-bucket-presigned-urls \
    --r2-bucket-binding bucket:my-bucket \
    --text-binding allowIps:1.2.3.4 \
@@ -145,7 +145,7 @@ With the following `~/.denoflare.jsonc`
 ```jsonc
 {
 	// For auto-completion!
-	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/common/config.schema.json",
+	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.1/common/config.schema.json",
 
     // Named worker script configurations
 	"scripts": {
@@ -154,7 +154,7 @@ With the following `~/.denoflare.jsonc`
         "my-bucket-presigned-urls": {
 
             // path can also be a local file path if you've modified the worker locally
-            "path": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.0/examples/r2-presigned-url-worker/worker.ts",
+            "path": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.1/examples/r2-presigned-url-worker/worker.ts",
 
             "bindings": {
                 "bucket": { "bucketName": "my-bucket" },

@@ -20,7 +20,7 @@ Learn how to use `denoflare serve` in the [Publish a Worker Guide](/guides/push)
 
 ```
 $ denoflare push --help
-denoflare-push 0.5.0
+denoflare-push 0.5.1
 
 Upload a Cloudflare worker script to Cloudflare
 
