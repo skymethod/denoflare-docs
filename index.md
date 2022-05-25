@@ -6,7 +6,7 @@ summary: Develop, test, and deploy Cloudflare Workers with Deno
 # Overview
 Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) with [Deno](https://deno.land)
 
-<Aside header="New in v0.5.1">
+<Aside header="New in v0.5.0">
 
 Support for [Cloudflare R2](https://developers.cloudflare.com/r2/)
 

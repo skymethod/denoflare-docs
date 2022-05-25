@@ -16,7 +16,7 @@ support for it in Denoflare.
 
 </Aside>
 
-Here are some things you can do with R2 starting with [Denoflare v0.5.1](https://github.com/skymethod/denoflare/releases/tag/v0.5.1).
+Here are some things you can do with R2 starting with [Denoflare v0.5.0](https://github.com/skymethod/denoflare/releases/tag/v0.5.0).
 
 ## Easily make your R2 bucket publicly-readable on your domain
 
