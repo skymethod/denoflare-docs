@@ -20,7 +20,7 @@ Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/ser
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.5.1
+denoflare-serve 0.5.2
 
 Run a Cloudflare worker script in a local Deno web server
 
@@ -35,6 +35,7 @@ OPTIONS:
     --cert-pem <path>                                           (required for https) Path to certificate file in pem format (contents start with -----BEGIN CERTIFICATE-----)
     --key-pem <path>                                            (required for https) Path to private key file in pem format (contents start with -----BEGIN PRIVATE KEY-----)
     --name <string>                                             Explicit script name to use from config file
+    --watch-include <path>...                                   Watch this additional path as well (e.g. for dynamically-imported static resources)
                                                                 
     --text-binding <name:plain-text>...                         Plain text environment variable binding, overrides config
     --secret-binding <name:secret-text>...                      Secret text environment variable binding, overrides config

@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.1/cli/site/site_config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.2/cli/site/site_config.schema.json",
     "product": "Denoflare",
     "productSvg": "/images/logo-inline.svg",
     "productRepo": "skymethod/denoflare",
