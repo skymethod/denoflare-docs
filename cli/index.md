@@ -39,7 +39,7 @@ Or, run without an install step at all, perhaps inside a CI build. Simply replac
 e.g. instead of `denoflare serve x`
 
 ```
-deno run --unstable --allow-read --allow-net --allow-env--allow-run \
+deno run --unstable --allow-read --allow-net --allow-env --allow-run \
 https://raw.githubusercontent.com/skymethod/denoflare/v0.5.2/cli/cli.ts serve x
 ```
 
