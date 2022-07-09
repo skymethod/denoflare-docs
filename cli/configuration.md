@@ -167,6 +167,9 @@ export interface Script {
      * See https://blog.cloudflare.com/custom-domains-for-workers/
      */
     readonly customDomains?: string[];
+
+    /** If specified, enable or disable the workers.dev route for this worker when deploying to Cloudflare. */
+    readonly workersDev?: boolean;
 }
 
 /** Code isolation to use when running worker scripts with `serve`, the local dev server.
@@ -186,7 +189,7 @@ Variables as well as Workers KV and Durable Object namespaces, Service Bindings,
 
 ```ts
 /** Binding definition for a worker script environment variable */
-export type Binding = TextBinding | SecretBinding | KVNamespaceBinding | DONamespaceBinding | WasmModuleBinding | ServiceBinding | R2BucketBinding;
+export type Binding = TextBinding | SecretBinding | KVNamespaceBinding | DONamespaceBinding | WasmModuleBinding | ServiceBinding | R2BucketBinding | AnalyticsEngineBinding | D1DatabaseBinding;
 
 /** Plain-text environment variable binding */
 export interface TextBinding {
@@ -246,6 +249,21 @@ export interface R2BucketBinding {
     /** The R2 bucket name */
     readonly bucketName: string;
 }
+
+/** Analytics Engine environment variable binding */
+export interface AnalyticsEngineBinding {
+
+    /** The Analytics Engine dataset name */
+    readonly dataset: string;
+}
+
+/** D1 database environment variable binding */
+export interface D1DatabaseBinding {
+
+    /** The D1 database uuid */
+    readonly d1DatabaseUuid: string;
+}
+
 ```
 
 ### Profile

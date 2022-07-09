@@ -21,7 +21,7 @@ No need for [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler), 
 
 <Button type="primary" href="/cli">Install denoflare</Button>
 
-Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.22.0/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.22.0/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.22.0/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.22.0/tools/bundler).
+Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.23.0/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.23.0/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.23.0/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.23.0/tools/bundler).
 
 Denoflare can:
  - Give you first-class support for [ESM-based workers](https://developers.cloudflare.com/workers/learning/using-durable-objects#instantiating-and-communicating-with-a-durable-object)

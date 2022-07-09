@@ -10,7 +10,7 @@ Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits fr
 
 ## Installation
 
-Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.22.0/getting_started/installation)
+Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.23.0/getting_started/installation)
 
 Install `denoflare` via standard [deno install](https://deno.land/manual@v1.21.0/tools/script_installer)
 
@@ -46,9 +46,13 @@ https://raw.githubusercontent.com/skymethod/denoflare/v0.5.3/cli/cli.ts serve x
 </div>
 </details>
 
-We'll start posting standard binary releases (via [deno compile](https://deno.land/manual@v1.22.0/tools/compiler)) when `denoflare` nears a stable feature set.
-
 Check out the [Releases](https://github.com/skymethod/denoflare/releases) page for the latest version number tag, and details about each pre-release.
+
+<Aside>
+
+We'll start producing single `denoflare` binaries for each release (via [deno compile](https://deno.land/manual@v1.23.0/tools/compiler)) whenever [Deno supports web workers in compile](https://github.com/denoland/deno/issues/8654)
+
+</Aside>
 
 ## Command help
 Once `denoflare` is installed, the cli includes docs on each command and subcommand, available via `--help`.

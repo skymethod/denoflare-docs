@@ -8,7 +8,7 @@ type: overview
 
 Cloudflare Workers supports running small WebAssembly modules within either [script-based](https://blog.cloudflare.com/webassembly-on-cloudflare-workers/) or [module-based](https://blog.cloudflare.com/workers-javascript-modules/#are-there-non-javascript-modules) workers.
 
-Denoflare provides a simple way to serve and deploy workers with WebAssembly components, building on Deno's [built-in WebAssembly support](https://deno.land/manual@v1.22.0/webassembly).
+Denoflare provides a simple way to serve and deploy workers with WebAssembly components, building on Deno's [built-in WebAssembly support](https://deno.land/manual@v1.23.0/webassembly).
 
 ## Module-based workers
 
