@@ -24,7 +24,7 @@ There are two ways to use the Denoflare CLI with a configuration file:
     // This jsonc file supports comments and trailing commas!
 
     // optional schema to get auto-completions when editing this file in vscode, etc
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.2/common/config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.3/common/config.schema.json",
 
     // define script configurations by name, and their associated bindings and options
     // you can then simply refer to them by name in your denoflare commands

@@ -23,7 +23,7 @@ enviroment variable binding named `SUFFIX`:
     ```jsonc
     // .denoflare
     {
-        "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.2/common/config.schema.json",
+        "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.3/common/config.schema.json",
         "scripts": {
             "complimenter": {
                 "path": "index.ts",

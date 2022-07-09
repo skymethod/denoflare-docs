@@ -20,7 +20,7 @@ Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
 
 ```
 $ denoflare push --help
-denoflare-push 0.5.2
+denoflare-push 0.5.3
 
 Upload a Cloudflare worker script to Cloudflare
 
@@ -35,6 +35,7 @@ OPTIONS:
     --watch                                                     If set, watch the local file system and automatically re-upload on script changes
     --watch-include <path>...                                   If watching, watch this additional path as well (e.g. for dynamically-imported static resources)
     --custom-domain <domain-or-subdomain-name>...               Bind worker to one or more Custom Domains for Workers
+    --workers-dev                                               Enable or disable the worker workers.dev route
     --delete-class <class-name>...                              Delete an obsolete Durable Object (and all data!) by class name as part of the update
                                                                 
     --text-binding <name:plain-text>...                         Plain text environment variable binding, overrides config

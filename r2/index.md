@@ -26,15 +26,13 @@ In the meantime, since making a bucket public for reading is so common, we've ma
 
 <Button type="primary" href="/examples/r2-public-read">Learn more</Button>
 
-## Generate presigned URLs to your R2 buckets
+## Generate presigned URLs to your R2 items
 
-Another common use-case for cloud storage is to make files available, but only to authenticated users via expiring URLs that are presigned.
+Another common use-case for cloud storage is to make files available, but only temporarily, via expiring URLs that are presigned.
 
-R2 now supports this feature directly, use the Denoflare CLI to generate presigned urls using your already configured credentials
+R2 now [supports this feature directly](https://developers.cloudflare.com/r2/platform/changelog/#2022-06-17), and you can use `denoflare r2 presign` to easily generate these presigned urls.
 
-TODO
-
-<Button type="primary" href="TODO">Learn more</Button>
+<Button type="primary" href="/cli/r2#presign">Learn more</Button>
 
 ## Track R2 costs and usage
 
@@ -48,7 +46,7 @@ You can query daily aggregate Class A operations, Class B operations, egress, st
 
 Interact with your R2 storage over the S3-compatible API from the new `denoflare r2` command.
 
-Each subcommand makes R2 calls via our [R2 TypeScript API](https://github.com/skymethod/denoflare/tree/v0.5.2/common/r2), available as a module or individual functions.
+Each subcommand makes R2 calls via our [R2 TypeScript API](https://github.com/skymethod/denoflare/tree/v0.5.3/common/r2), available as a module or individual functions.
 The API is lightweight (no deps on aws-sdk or aws4fetch, only on [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser) and web standards). It can even be used within Workers themselves.
 
 <details>
