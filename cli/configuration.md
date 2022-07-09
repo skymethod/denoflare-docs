@@ -182,7 +182,7 @@ export type Isolation = 'none' | 'isolate';
 ### Bindings
 
 Each [Script](#script) can have a bindings object which is keyed by binding name. Bindings give access to Environment
-Variables as well as Workers KV and Durable Object namespaces, Service Bindings, WASM Modules, and R2 Buckets.
+Variables as well as Workers KV and Durable Object namespaces, Service Bindings, Wasm Modules, and R2 Buckets.
 
 ```ts
 /** Binding definition for a worker script environment variable */

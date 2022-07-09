@@ -12,7 +12,7 @@ By default, it will push once, but you can pass `--watch` to push on every chang
 
 <Aside>
 
-Learn how to use `denoflare serve` in the [Publish a Worker Guide](/guides/push).
+Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
 
 </Aside>
 
@@ -41,7 +41,7 @@ OPTIONS:
     --secret-binding <name:secret-text>...                      Secret text environment variable binding, overrides config
     --kv-namespace-binding <name:namespace-id>...               KV namespace environment variable binding, overrides config
     --do-namespace-binding <name:namespace-name:class-name>...  DO namespace environment variable binding, overrides config
-    --wasm-module-binding <name:path-to-local-wasm-file>...     WASM module environment variable binding, overrides config
+    --wasm-module-binding <name:path-to-local-wasm-file>...     Wasm module environment variable binding, overrides config
     --service-binding <name:service:environment>...             Service environment variable binding, overrides config
     --r2-bucket-binding <name:bucket-name>...                   R2 bucket environment variable binding, overrides config
                                                                 

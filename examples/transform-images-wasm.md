@@ -1,10 +1,10 @@
 ---
-title: Transform Images with WASM
-summary: Transform Images with WASM in a Cloudflare Worker, using WebAssembly from Photon and pngs.
+title: Transform Images with Wasm
+summary: Transform Images with Wasm in a Cloudflare Worker, using WebAssembly from Photon and pngs.
 order: 2
 ---
 
-# Transform Images with WASM in a Cloudflare Worker
+# Transform Images with Wasm in a Cloudflare Worker
 
 Prototype demonstrating running image resizing and other transforms completely inside a Cloudflare Worker.
 

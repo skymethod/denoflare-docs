@@ -26,14 +26,15 @@ In the meantime, since making a bucket public for reading is so common, we've ma
 
 <Button type="primary" href="/examples/r2-public-read">Learn more</Button>
 
-## Easily make your R2 bucket readable via presigned URLs
+## Generate presigned URLs to your R2 buckets
 
 Another common use-case for cloud storage is to make files available, but only to authenticated users via expiring URLs that are presigned.
 
-This feature will eventually be supported in R2 directly, but in the meantime, we've made another open-source utility worker available to support this. 
-Set up access with `denoflare r2 generate-credentials`, then a one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
+R2 now supports this feature directly, use the Denoflare CLI to generate presigned urls using your already configured credentials
 
-<Button type="primary" href="/examples/r2-presigned-urls">Learn more</Button>
+TODO
+
+<Button type="primary" href="TODO">Learn more</Button>
 
 ## Track R2 costs and usage
 

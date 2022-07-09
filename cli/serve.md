@@ -41,7 +41,7 @@ OPTIONS:
     --secret-binding <name:secret-text>...                      Secret text environment variable binding, overrides config
     --kv-namespace-binding <name:namespace-id>...               KV namespace environment variable binding, overrides config
     --do-namespace-binding <name:namespace-name:class-name>...  DO namespace environment variable binding, overrides config
-    --wasm-module-binding <name:path-to-local-wasm-file>...     WASM module environment variable binding, overrides config
+    --wasm-module-binding <name:path-to-local-wasm-file>...     Wasm module environment variable binding, overrides config
     --service-binding <name:service:environment>...             Service environment variable binding, overrides config
     --r2-bucket-binding <name:bucket-name>...                   R2 bucket environment variable binding, overrides config
                                                                 
