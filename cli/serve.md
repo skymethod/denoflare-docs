@@ -20,7 +20,7 @@ Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/ser
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.5.3
+denoflare-serve 0.5.4
 
 Run a Cloudflare worker script in a local Deno web server
 
@@ -50,7 +50,7 @@ OPTIONS:
     --account-id <string>                                       Explicit Cloudflare account id to use for authentication
     --api-token <string>                                        Explicit Cloudflare API token to use for authentication
                                                                 
-    --bundle <name=value>...                                    Advanced options used when emitting javascript bundles: backend=(process, module)
+    --bundle <name=value>...                                    Advanced options used when emitting javascript bundles: backend=(process|module), check=(all|local|none)
                                                                 
     --help                                                      Print help information
     --verbose                                                   Toggle verbose output (when applicable)

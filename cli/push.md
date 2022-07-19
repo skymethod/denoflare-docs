@@ -20,7 +20,7 @@ Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
 
 ```
 $ denoflare push --help
-denoflare-push 0.5.3
+denoflare-push 0.5.4
 
 Upload a Cloudflare worker script to Cloudflare
 
@@ -51,7 +51,7 @@ OPTIONS:
     --account-id <string>                                       Explicit Cloudflare account id to use for authentication
     --api-token <string>                                        Explicit Cloudflare API token to use for authentication
                                                                 
-    --bundle <name=value>...                                    Advanced options used when emitting javascript bundles: backend=(process, module)
+    --bundle <name=value>...                                    Advanced options used when emitting javascript bundles: backend=(process|module), check=(all|local|none)
                                                                 
     --help                                                      Print help information
     --verbose                                                   Toggle verbose output (when applicable)

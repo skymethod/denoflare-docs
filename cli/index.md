@@ -16,7 +16,7 @@ Install `denoflare` via standard [deno install](https://deno.land/manual@v1.21.0
 
 ```
 deno install --unstable --allow-read --allow-net --allow-env --allow-run --name denoflare --force \
-https://raw.githubusercontent.com/skymethod/denoflare/v0.5.3/cli/cli.ts
+https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/cli/cli.ts
 ```
 
 <details>
@@ -30,7 +30,7 @@ This allows you to create multiple aliases with different permissions.
 # in ~/.bash_profile
 function denoflare {
     deno run --unstable --allow-read --allow-net --allow-env --allow-run \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.3/cli/cli.ts "$@"
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/cli/cli.ts "$@"
 }
 ```
 
@@ -40,7 +40,7 @@ e.g. instead of `denoflare serve x`
 
 ```
 deno run --unstable --allow-read --allow-net --allow-env --allow-run \
-https://raw.githubusercontent.com/skymethod/denoflare/v0.5.3/cli/cli.ts serve x
+https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/cli/cli.ts serve x
 ```
 
 </div>
@@ -65,7 +65,7 @@ Each subcommand below also links to its own dedicated help page, if available.
 
 ```
 $ denoflare --help
-denoflare 0.5.3
+denoflare 0.5.4
 
 USAGE:
     denoflare <command> <args> <options>
