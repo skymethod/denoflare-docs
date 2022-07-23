@@ -12,11 +12,12 @@ In the meantime, since making a bucket public for reading is so common, we've ma
 
 ## Features
 
-This [open-source worker](https://github.com/skymethod/denoflare/tree/v0.5.4/examples/r2-public-read-worker) makes a single R2 bucket available via public-read with the following features:
+This [open-source worker](https://github.com/skymethod/denoflare/tree/v0.5.6/examples/r2-public-read-worker) makes a single R2 bucket available via public-read with the following features:
  - Supports conditional requests, range requests, and objects stored with pre-existing content-encoding
  - (optional) Input flag to enable directory listing as html, with a configurable page limit
  - (optional) Input flag to enable routing similar to [Cloudflare Pages](https://developers.cloudflare.com/pages/), `index.html` served for directories, root level `404.html` etc
  - (optional) Allow/deny ip lists
+ - (optional) Enable CORS access to all or specific request origins, and optionally further restrict CORS access to specific file types
 
 ## Prerequisites
 You'll need:
@@ -56,10 +57,11 @@ Let's say your your Cloudflare account id is `f2601bf4d2d5ddcb17981afe4db16dd2`,
 You can make this bucket available (for reading) at `my-bucket.my-domain.com` with the following command:
 
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/examples/r2-public-read-worker/worker.ts \
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.6/examples/r2-public-read-worker/worker.ts \
    --name my-bucket-public-read \
    --r2-bucket-binding bucket:my-bucket \
    --text-binding flags:listDirectories \
+   --text-binding allowCorsOrigins:* \
    --custom-domain my-bucket.my-domain.com \
    --account-id f2601bf4d2d5ddcb17981afe4db16dd2 \
    --api-token ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -73,7 +75,7 @@ Your worker will be listed under your account, named `my-bucket-public-read`.
 
 ## Configuration
 
-The worker takes [five environment variables](https://github.com/skymethod/denoflare/blob/v0.5.4/examples/r2-public-read-worker/worker_env.d.ts)
+The worker takes [five environment variables](https://github.com/skymethod/denoflare/blob/v0.5.6/examples/r2-public-read-worker/worker_env.d.ts)
  - `bucket`: (required) Your r2 bucket name
  - `flags`: (optional) Comma-separated flags:
    - `directoryListing`: Display an html listing for directories
@@ -83,7 +85,8 @@ The worker takes [five environment variables](https://github.com/skymethod/denof
  - `allowIps`: (optional) Comma-separated ip addresses to allow (applied second)
  - `directoryListingLimit`: (optional) Page limit (in `directoryListing` mode)
    - Currently defaults to max (1000) due to a known R2 listing bug
-
+ - `allowCorsOrigins`: (optional) Comma-separated request origins for which CORS is allowed. e.g. `*` or `https://origin1.com, https://origin2.com`
+ - `allowCorsTypes`: (optional) Comma-separated file extensions (`.mp4, .m3u8, .ts`) or content types (`video/mp4, application/x-mpegurl, video/mp2t`) to further restrict CORS, provided the origin is also allowed
 
 ## Example
 
@@ -92,12 +95,13 @@ As with any Denoflare script, you can specify the environment variable bindings 
 The following are equivalent:
 
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/examples/r2-public-read-worker/worker.ts \
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.6/examples/r2-public-read-worker/worker.ts \
    --name my-bucket-public-read \
    --r2-bucket-binding bucket:my-bucket \
    --text-binding flags:disallowRobots,emulatePages \
    --text-binding allowIps:1.2.3.4 \
    --text-binding directoryListingLimit:20 \
+   --text-binding allowCorsOrigins:* \
    --custom-domain my-bucket.my-domain.com \
    --account-id f2601bf4d2d5ddcb17981afe4db16dd2 \
    --api-token ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -114,7 +118,7 @@ With the following `~/.denoflare.jsonc`
 ```jsonc
 {
 	// For auto-completion!
-	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/common/config.schema.json",
+	"$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.6/common/config.schema.json",
 
     // Named worker script configurations
 	"scripts": {
@@ -123,13 +127,14 @@ With the following `~/.denoflare.jsonc`
         "my-bucket-public-read": {
 
             // path can also be a local file path if you've modified the worker locally
-            "path": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.4/examples/r2-public-read-worker/worker.ts",
+            "path": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.6/examples/r2-public-read-worker/worker.ts",
 
             "bindings": {
                 "bucket": { "bucketName": "my-bucket" },
                 "flags": { "value": "disallowRobots,emulatePages" },
                 "allowIps": { "value": "1.2.3.4" },
                 "directoryListingLimit": { "value": "20" },
+                "allowCorsOrigins": { "value": "*" },
             },
             "customDomains": [ "my-bucket.my-domain.com" ],
         },

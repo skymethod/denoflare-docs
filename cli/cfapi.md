@@ -10,7 +10,7 @@ Call the Cloudflare REST API
 ## --help
 ```
 $ denoflare cfapi --help
-denoflare-cfapi 0.5.4
+denoflare-cfapi 0.5.6
 
 Call the Cloudflare REST API
 

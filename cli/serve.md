@@ -20,7 +20,7 @@ Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/ser
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.5.4
+denoflare-serve 0.5.6
 
 Run a Cloudflare worker script in a local Deno web server
 
