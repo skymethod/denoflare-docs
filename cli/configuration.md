@@ -23,12 +23,12 @@ There are two ways to use the Denoflare CLI with a configuration file:
 {
     // This jsonc file supports comments and trailing commas!
 
-    // optional schema to get auto-completions when editing this file in vscode, etc
+    // Optional schema to get auto-completions when editing this file in vscode, etc
     "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.6/common/config.schema.json",
 
-    // define script configurations by name, and their associated bindings and options
-    // you can then simply refer to them by name in your denoflare commands
-    // note the same script source can be specified more than once with different configurations (local vs prod etc)
+    // Define script configurations by name, and their associated bindings and options.
+    // You can then simply refer to them by name in your denoflare commands.
+    // Note the same script source can be specified more than once with different configurations (local vs prod etc).
     "scripts": {
         "script1-local": {
             "path": "/Users/me/path/to/script1.js",
@@ -69,10 +69,11 @@ There are two ways to use the Denoflare CLI with a configuration file:
         },
     },
 
-    // define one or more named profiles to specify Cloudflare API token credentials
-    // you can then refer to them by name in your denoflare commands, using --profile <profile-name>
-    // or if no --profile is specified, the default profile will be used
-    // the default profile is either the only profile specified (as shown here), or the one marked with default: true
+    // Define one or more named profiles to specify Cloudflare API token credentials.
+    // You can then refer to them by name in your denoflare commands, using --profile <profile-name>.
+    // If no --profile is specified, the default profile will be used.
+    // The default profile is either the only profile specified (as shown here), or the one marked with default: true
+    // If you'd rather use environment variables instead of defining a profile in config, set CF_ACCOUNT_ID and CF_API_TOKEN.
     "profiles": {
         "account1": {
             "accountId": "4fc7a4becb8b41d887c5bb970b0guse1",
