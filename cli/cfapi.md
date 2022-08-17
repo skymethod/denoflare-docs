@@ -10,7 +10,7 @@ Call the Cloudflare REST API
 ## --help
 ```
 $ denoflare cfapi --help
-denoflare-cfapi 0.5.6
+denoflare-cfapi 0.5.7
 
 Call the Cloudflare REST API
 
@@ -39,6 +39,7 @@ SUBCOMMANDS:
     list-buckets                          List R2 buckets
     create-bucket                         Create a new R2 bucket
     delete-bucket                         Delete a R2 bucket
+    get-bucket-usage-summary              Get R2 Bucket usage summary
                                           
     verify-token                          Verify an api token
     list-memberships                      List memberships
