@@ -78,12 +78,12 @@ Your worker will be listed under your account, named `my-bucket-public-read`.
 The worker takes [five environment variables](https://github.com/skymethod/denoflare/blob/v0.5.7/examples/r2-public-read-worker/worker_env.d.ts)
  - `bucket`: (required) Your r2 bucket name
  - `flags`: (optional) Comma-separated flags:
-   - `directoryListing`: Display an html listing for directories
+   - `listDirectories`: Display an html listing for directories
    - `emulatePages`: Cloudflare Pages-like routing for directories using index.html
    - `disallowRobots`: Serve a robots.txt that disallows all robots, regardless of bucket contents
  - `denyIps`: (optional) Comma-separated ip addresses to deny (applied first)
  - `allowIps`: (optional) Comma-separated ip addresses to allow (applied second)
- - `directoryListingLimit`: (optional) Page limit (in `directoryListing` mode)
+ - `directoryListingLimit`: (optional) Page limit (in `listDirectories` mode)
    - Currently defaults to max (1000) due to a known R2 listing bug
  - `allowCorsOrigins`: (optional) Comma-separated request origins for which CORS is allowed. e.g. `*` or `https://origin1.com, https://origin2.com`
  - `allowCorsTypes`: (optional) Comma-separated file extensions (`.mp4, .m3u8, .ts`) or content types (`video/mp4, application/x-mpegurl, video/mp2t`) to further restrict CORS, provided the origin is also allowed
