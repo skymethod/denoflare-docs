@@ -11,7 +11,7 @@ Host static Cloudflare Pages site locally
 ## --help
 ```
 $ denoflare site serve --help
-denoflare-site-serve 0.5.7
+denoflare-site-serve 0.5.8
 
 Host a static Cloudflare Pages site in a local Deno web server
 
