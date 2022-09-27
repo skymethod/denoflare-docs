@@ -6,9 +6,18 @@ order: 3
 
 # Easily make your R2 bucket publicly-readable on your own domain
 
-R2 has an [S3-compatible API](https://developers.cloudflare.com/r2/platform/s3-compatibility/api/), but does not yet support the public-read ACL, although it is on their roadmap.
+R2 has an [S3-compatible API](https://developers.cloudflare.com/r2/platform/s3-compatibility/api/), ~~but does not yet support the public-read ACL, although it is on their roadmap~~.
 
-In the meantime, since making a bucket public for reading is so common, we've made an open-source utility worker available to do this. It's a single one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
+<Aside>
+
+R2 now [supports this feature directly](https://developers.cloudflare.com/r2/data-access/public-buckets/) as of September 2022!
+
+</Aside>
+
+
+We made an open-source utility worker available to do this prior to official support. It's a single one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
+
+This worker might still be useful for use cases where you want to run custom logic or auth over standard public buckets.
 
 ## Features
 

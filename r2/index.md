@@ -7,12 +7,11 @@ order: 1
 
 # Denoflare ♥️ Cloudflare R2
 
-Cloudflare recently made [R2](https://developers.cloudflare.com/r2), its cloud storage offering, available in [beta to all customers](https://blog.cloudflare.com/r2-open-beta/).
+Cloudflare recently made [R2](https://developers.cloudflare.com/r2), its cloud storage offering, [generally available to all customers](https://blog.cloudflare.com/r2-ga/). in [beta to all customers](https://blog.cloudflare.com/r2-open-beta/).
 
 <Aside>
 
-R2 is still in an early pre-release state, but we're excited about this new service, and want to provide first-class
-support for it in Denoflare.
+Denoflare supported R2 since it was in [early beta](https://blog.cloudflare.com/r2-open-beta/).
 
 </Aside>
 
@@ -20,9 +19,17 @@ Here are some things you can do with R2 starting with [Denoflare v0.5.0](https:/
 
 ## Easily make your R2 bucket publicly-readable on your domain
 
-R2 has an [S3-compatible API](https://developers.cloudflare.com/r2/platform/s3-compatibility/api/), but does not yet support the public-read ACL, although it is on their roadmap.
+R2 has an [S3-compatible API](https://developers.cloudflare.com/r2/platform/s3-compatibility/api/), ~~but does not yet support the public-read ACL, although it is on their roadmap~~.
 
-In the meantime, since making a bucket public for reading is so common, we've made an open-source utility worker available to do this. It's a single one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
+<Aside>
+
+R2 now [supports this feature directly](https://developers.cloudflare.com/r2/data-access/public-buckets/) as of September 2022!
+
+</Aside>
+
+We made an open-source utility worker available to do this prior to official support. It's a single one-time `denoflare push` command to deploy it to your own account and zone (via [Custom Domains for Workers](https://blog.cloudflare.com/custom-domains-for-workers/)), no git commands or any other tools necessary.
+
+This worker might still be useful for use cases where you want to run custom logic or auth over standard public buckets.
 
 <Button type="primary" href="/examples/r2-public-read">Learn more</Button>
 
