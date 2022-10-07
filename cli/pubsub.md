@@ -10,7 +10,7 @@ Interact with your [Cloudflare Pub/Sub](https://developers.cloudflare.com/pub-su
 ## --help
 ```
 $ denoflare pubsub --help
-denoflare-pubsub 0.5.8
+denoflare-pubsub 0.5.9
 
 Interact with your Cloudflare Pub/Sub broker
 
@@ -28,7 +28,7 @@ For subcommand-specific help: denoflare pubsub <subcommand> --help
 ## publish
 ```
 $ denoflare pubsub publish --help
-denoflare-pubsub-publish 0.5.8
+denoflare-pubsub-publish 0.5.9
 
 Publish a message to a Pub/Sub broker
 
@@ -62,7 +62,7 @@ OPTIONS:
 ## subscribe
 ```
 $ denoflare pubsub subscribe --help
-denoflare-pubsub-subscribe 0.5.8
+denoflare-pubsub-subscribe 0.5.9
 
 Subscribe to a Pub/Sub broker
 
@@ -92,7 +92,7 @@ OPTIONS:
 ## jwt
 ```
 $ denoflare pubsub jwt --help
-denoflare-pubsub-jwt 0.5.8
+denoflare-pubsub-jwt 0.5.9
 
 Parse a JWT token, and output its claims
 

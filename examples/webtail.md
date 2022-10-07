@@ -46,7 +46,7 @@ Since it is a standard module-based Cloudflare Worker, you can deploy it like an
 
 ```
 denoflare push --name webtail \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.8/examples/webtail-worker/webtail_worker.ts
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.9/examples/webtail-worker/webtail_worker.ts
 ```
 
 ## Host it locally
@@ -55,5 +55,5 @@ Since it is a standard module-based Cloudflare Worker, you can run it locally li
 
 ```
 denoflare serve \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.8/examples/webtail-worker/webtail_worker.ts
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.9/examples/webtail-worker/webtail_worker.ts
 ```
