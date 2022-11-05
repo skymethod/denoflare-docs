@@ -11,7 +11,7 @@ Generate static output for Cloudfare Pages
 ## --help
 ```
 $ denoflare site generate --help
-denoflare-site-generate 0.5.9
+denoflare-site-generate 0.5.10
 
 Develop and deploy a static docs site to Cloudflare Pages
 

@@ -20,7 +20,7 @@ Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
 
 ```
 $ denoflare push --help
-denoflare-push 0.5.9
+denoflare-push 0.5.10
 
 Upload a Cloudflare worker script to Cloudflare
 
@@ -46,6 +46,7 @@ OPTIONS:
     --service-binding <name:service:environment>...             Service environment variable binding, overrides config
     --r2-bucket-binding <name:bucket-name>...                   R2 bucket environment variable binding, overrides config
     --ae-dataset-binding <name:dataset-name>...                 Analytics Engine dataset environment variable binding, overrides config
+    --queue-binding <name:queue-name>...                        Queue environment variable binding, overrides config
                                                                 
     --config <path>                                             Path to config file (default: .denoflare in cwd or parents)
     --profile <name>                                            Explicit profile to use from config file

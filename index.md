@@ -21,7 +21,7 @@ No need for [Wrangler](https://developers.cloudflare.com/workers/cli-wrangler), 
 
 <Button type="primary" href="/cli">Install denoflare</Button>
 
-Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.26.1/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.26.1/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.26.1/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.26.1/tools/bundler).
+Deno is a great fit for Workers development, the runtime is based on [the modern Web Platform](https://deno.land/manual@v1.27.1/runtime/web_platform_apis), just like Workers, is [secure by default](https://deno.land/manual@v1.27.1/getting_started/permissions), is based on [ESM modules](https://deno.land/manual@v1.27.1/linking_to_external_code), and has a [built-in bundler](https://deno.land/manual@v1.27.1/tools/bundler).
 
 Denoflare can:
  - Give you first-class support for [ESM-based workers](https://developers.cloudflare.com/workers/learning/using-durable-objects#instantiating-and-communicating-with-a-durable-object)
@@ -43,9 +43,9 @@ Denoflare can:
 [Learn more about the CLI](/cli)
 
 ## Deploy via files or URLs
-Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.5.9/examples/hello-worker/hello.ts) is trivial:
+Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.5.10/examples/hello-worker/hello.ts) is trivial:
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.9/examples/hello-worker/hello.ts
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.10/examples/hello-worker/hello.ts
 ```
 
 ## Roadmap
