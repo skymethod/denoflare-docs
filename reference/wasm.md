@@ -18,11 +18,11 @@ Since this is not valid in browsers/Deno, nor valid under the [proposed WebAssem
 
 It also needs to have syntax that will run in `denoflare serve` in both local isolation modes, as well incorporate well into other Deno projects unrelated to Denoflare.
 
-To accomplish this, Denoflare provides a special function called `importWasm` that will load Wasm properly in Deno and both modes of `denoflare serve`, and will be rewritten during `denoflare push` to the syntax required by Cloudflare. `importWasm` is just a [small standard Deno function](https://github.com/skymethod/denoflare/blob/v0.5.10/common/import_wasm.ts), it builds on [import.meta.url](https://deno.land/manual/examples/module_metadata) and Deno's recent support for local file:// `fetch`.
+To accomplish this, Denoflare provides a special function called `importWasm` that will load Wasm properly in Deno and both modes of `denoflare serve`, and will be rewritten during `denoflare push` to the syntax required by Cloudflare. `importWasm` is just a [small standard Deno function](https://github.com/skymethod/denoflare/blob/v0.5.11/common/import_wasm.ts), it builds on [import.meta.url](https://deno.land/manual/examples/module_metadata) and Deno's recent support for local file:// `fetch`.
 
 *worker.ts*
 ```ts
-import { importWasm } from 'https://raw.githubusercontent.com/skymethod/denoflare/v0.5.10/common/import_wasm.ts';
+import { importWasm } from 'https://raw.githubusercontent.com/skymethod/denoflare/v0.5.11/common/import_wasm.ts';
 const module = await importWasm(import.meta.url, './hello.wasm');
 // import module from './hello.wasm';
 // is the replacement used when pushing to Cloudflare
@@ -44,7 +44,7 @@ export default {
 };
 ```
 
-See the [hello-wasm-worker example](https://github.com/skymethod/denoflare/blob/v0.5.10/examples/hello-wasm-worker/hello.ts) for more information.
+See the [hello-wasm-worker example](https://github.com/skymethod/denoflare/blob/v0.5.11/examples/hello-wasm-worker/hello.ts) for more information.
 
 ## Script-based workers
 

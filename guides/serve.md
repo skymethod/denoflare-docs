@@ -27,7 +27,7 @@ Follow these steps to setup `denoflare serve` to run from a config file.  This a
     ```jsonc
     // .denoflare
     {
-        "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.10/common/config.schema.json",
+        "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.5.11/common/config.schema.json",
         "scripts": {
             "hello-local": {
                 "path": "index.ts",

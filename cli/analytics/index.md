@@ -10,7 +10,7 @@ Dump stats via the Cloudflare GraphQL Analytics API
 ## --help
 ```
 $ denoflare analytics --help
-denoflare-analytics 0.5.10
+denoflare-analytics 0.5.11
 
 Dump stats via the Cloudflare GraphQL Analytics API
 

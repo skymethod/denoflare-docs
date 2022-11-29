@@ -10,7 +10,7 @@ Call the Cloudflare REST API
 ## --help
 ```
 $ denoflare cfapi --help
-denoflare-cfapi 0.5.10
+denoflare-cfapi 0.5.11
 
 Call the Cloudflare REST API
 
@@ -61,6 +61,10 @@ SUBCOMMANDS:
     revoke-pubsub-credentials             Revoke credentials for a Pub/Sub broker
     list-pubsub-revocations               List revocations for a Pub/Sub broker
     delete-pubsub-revocations             Delete revocations for a Pub/Sub broker
+                                          
+    create-logpush-job                    Create a Logpush job
+    update-logpush-job                    Update a Logpush job
+    delete-logpush-job                    Delete a Logpush job
 
 For subcommand-specific help: denoflare cfapi <subcommand> --help
 ```
