@@ -10,9 +10,9 @@ Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits fr
 
 ## Installation
 
-Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.27.1/getting_started/installation)
+Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.34.2/getting_started/installation)
 
-Install `denoflare` via standard [deno install](https://deno.land/manual@v1.27.1/tools/script_installer)
+Install `denoflare` via standard [deno install](https://deno.land/manual@v1.34.2/tools/script_installer)
 
 ```
 deno install --unstable --allow-read --allow-net --allow-env --allow-run --name denoflare --force \
@@ -50,7 +50,7 @@ Check out the [Releases](https://github.com/skymethod/denoflare/releases) page f
 
 <Aside>
 
-We'll start producing single `denoflare` binaries for each release (via [deno compile](https://deno.land/manual@v1.27.1/tools/compiler)) whenever [Deno supports web workers in compile](https://github.com/denoland/deno/issues/8654)
+We'll start producing single `denoflare` binaries for each release (via [deno compile](https://deno.land/manual@v1.34.2/tools/compiler)) whenever [Deno supports web workers in compile](https://github.com/denoland/deno/issues/8654)
 
 </Aside>
 
