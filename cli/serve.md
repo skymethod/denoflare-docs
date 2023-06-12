@@ -20,7 +20,7 @@ Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/ser
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.5.11
+denoflare-serve 0.5.12
 
 Run a Cloudflare worker script in a local Deno web server
 
@@ -36,6 +36,7 @@ OPTIONS:
     --key-pem <path>                                               (required for https) Path to private key file in pem format (contents start with -----BEGIN PRIVATE KEY-----)
     --name <string>                                                Explicit script name to use from config file
     --watch-include <path>...                                      Watch this additional path as well (e.g. for dynamically-imported static resources)
+    --local-isolation <local-isolation>                            Local isolation mode: use 'none' for debugging, disables sandbox and hot-reload (one of: isolate, none, default: isolate)
                                                                    
     --text-binding <name:plain-text>...                            Plain text environment variable binding, overrides config
     --secret-binding <name:secret-text>...                         Secret text environment variable binding, overrides config

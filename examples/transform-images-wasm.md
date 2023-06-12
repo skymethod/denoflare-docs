@@ -18,7 +18,7 @@ Hosted version: https://image-demo.denoflare.dev/
 
 Sample input images come from [Unsplash](https://unsplash.com/).
 
-Source is available in the [Denoflare repo](https://github.com/skymethod/denoflare/tree/v0.5.11/examples/image-demo-worker).
+Source is available in the [Denoflare repo](https://github.com/skymethod/denoflare/tree/v0.5.12/examples/image-demo-worker).
 
 ## Deploy it to your own account
 
@@ -28,7 +28,7 @@ First, register a new app with Unsplash (free), you'll need your app name and _i
 
 ```
 denoflare push --name image-demo \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.11/examples/image-demo-worker/worker.ts \
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.12/examples/image-demo-worker/worker.ts \
     --text-binding unsplashAppName:your_app_name \
     --text-binding unsplashIxid:your_ixid
 ```
@@ -40,7 +40,7 @@ Since it is a standard module-based Cloudflare Worker, you can run it locally li
 First, register a new app with Unsplash (free), you'll need your app name and _ixid_ as worker environment vars, to comply their TOS.
 ```
 denoflare serve \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.11/examples/image-demo-worker/worker.ts
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.12/examples/image-demo-worker/worker.ts
     --text-binding unsplashAppName:your_app_name \
     --text-binding unsplashIxid:your_ixid
 ```

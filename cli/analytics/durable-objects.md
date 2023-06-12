@@ -11,7 +11,7 @@ Dump durable objects stats via the Cloudflare GraphQL Analytics API
 ## --help
 ```
 $ denoflare analytics durable-objects --help
-denoflare-analytics-durable-objects 0.5.11
+denoflare-analytics-durable-objects 0.5.12
 
 Dump durable objects stats via the Cloudflare GraphQL Analytics API
 

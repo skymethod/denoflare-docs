@@ -10,7 +10,7 @@ Call the Cloudflare REST API
 ## --help
 ```
 $ denoflare cfapi --help
-denoflare-cfapi 0.5.11
+denoflare-cfapi 0.5.12
 
 Call the Cloudflare REST API
 
@@ -27,6 +27,8 @@ SUBCOMMANDS:
                                           
     put-key-value                         Set KV value
     get-key-value                         Get KV value
+    list-keys                             List a KV namespace's keys
+    list-kv-namespaces                    List KV namespaces
                                           
     get-worker-service-subdomain-enabled  Get whether or not the workers.dev route is enabled for a given worker service
     enable-worker-service-subdomain       Enable the workers.dev route for a given worker service

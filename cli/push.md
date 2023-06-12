@@ -20,7 +20,7 @@ Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
 
 ```
 $ denoflare push --help
-denoflare-push 0.5.11
+denoflare-push 0.5.12
 
 Upload a Cloudflare worker script to Cloudflare
 
@@ -37,6 +37,8 @@ OPTIONS:
     --custom-domain <domain-or-subdomain-name>...                  Bind worker to one or more Custom Domains for Workers
     --workers-dev                                                  Enable or disable the worker workers.dev route
     --logpush                                                      Enable or disable logpush for the worker
+    --compatibility-date <string>                                  Specific compatibility environment for the worker, see https://developers.cloudflare.com/workers/platform/compatibility-dates/
+    --compatibility-flag <string>...                               Specific compatibility flags for the worker, see https://developers.cloudflare.com/workers/platform/compatibility-dates/#compatibility-flags
     --delete-class <class-name>...                                 Delete an obsolete Durable Object (and all data!) by class name as part of the update
                                                                    
     --text-binding <name:plain-text>...                            Plain text environment variable binding, overrides config
