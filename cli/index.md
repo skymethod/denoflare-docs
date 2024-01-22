@@ -16,7 +16,7 @@ Install `denoflare` via standard [deno install](https://deno.land/manual@v1.34.2
 
 ```
 deno install --unstable --allow-read --allow-net --allow-env --allow-run --name denoflare --force \
-https://raw.githubusercontent.com/skymethod/denoflare/v0.5.12/cli/cli.ts
+https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/cli/cli.ts
 ```
 
 <details>
@@ -30,7 +30,7 @@ This allows you to create multiple aliases with different permissions.
 # in ~/.bash_profile
 function denoflare {
     deno run --unstable --allow-read --allow-net --allow-env --allow-run \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.5.12/cli/cli.ts "$@"
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/cli/cli.ts "$@"
 }
 ```
 
@@ -40,7 +40,7 @@ e.g. instead of `denoflare serve x`
 
 ```
 deno run --unstable --allow-read --allow-net --allow-env --allow-run \
-https://raw.githubusercontent.com/skymethod/denoflare/v0.5.12/cli/cli.ts serve x
+https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/cli/cli.ts serve x
 ```
 
 </div>
@@ -65,22 +65,26 @@ Each subcommand below also links to its own dedicated help page, if available.
 
 ```
 $ denoflare --help
-denoflare 0.5.12
+denoflare 0.6.0
 
 USAGE:
     denoflare <command> <args> <options>
 
 COMMANDS:
-    [serve](/cli/serve)      Run a Cloudflare worker script in a local Deno web server
-    [push](/cli/push)       Upload a Cloudflare worker script to Cloudflare
-    [tail](/cli/tail)       View a real-time stream of logs from a published Cloudflare worker
-    [site](/cli/site)       Develop and deploy a static docs site to Cloudflare Pages
-    [analytics](/cli/analytics)  Dump stats via the Cloudflare GraphQL Analytics API
-    [cfapi](/cli/cfapi)      Call the Cloudflare REST API
-    [r2](/cli/r2)         Manage Cloudflare R2 storage using the S3 compatibility API
-    [pubsub](/cli/pubsub)     Interact with your Cloudflare Pub/Sub broker
-    [d1](/cli/d1)         Manage and query your Cloudflare D1 databases
-    version    Dump cli version
+    [serve](/cli/serve)          Run a Cloudflare worker script in a local Deno web server
+    [push](/cli/push)           Upload a Cloudflare worker script to Cloudflare
+    [push-lambda](/cli/push-lambda)    Upload a Cloudflare worker script to AWS Lambda + public function URL
+    [push-deploy](/cli/push-deploy)    Upload a Cloudflare worker script to Deno Deploy
+    [push-supabase](/cli/push-supabase)  Upload a Cloudflare worker script to Supabase Edge Functions
+    [tail](/cli/tail)           View a real-time stream of logs from a published Cloudflare worker
+    [site](/cli/site)           Develop and deploy a static docs site to Cloudflare Pages
+    [analytics](/cli/analytics)      Dump stats via the Cloudflare GraphQL Analytics API
+    [cfapi](/cli/cfapi)          Call the Cloudflare REST API
+    [r2](/cli/r2)             Manage Cloudflare R2 storage using the S3 compatibility API
+    [pubsub](/cli/pubsub)         Interact with your Cloudflare Pub/Sub broker
+    [d1](/cli/d1)             Manage and query your Cloudflare D1 databases
+    [ae-proxy](/cli/ae-proxy)       Host a proxy endpoint to Analytics Engine more compatible with Clickhouse plugins
+    version        Dump cli version
 
 For command-specific help: denoflare <command> --help
 ```

@@ -6,6 +6,15 @@ summary: Develop, test, and deploy Cloudflare Workers with Deno
 # Overview
 Develop, test, and deploy [Cloudflare Workers](https://workers.cloudflare.com) with [Deno](https://deno.land)
 
+
+<Aside header="New in v0.6.0+">
+
+Experimental support for deploying the same worker to [Deno Deploy](https://deno.com/deploy), [AWS Lambda](https://aws.amazon.com/lambda/), or [Supabase Edge Functions](https://supabase.com/docs/guides/functions)
+
+[Learn more about Denoflare’s support for multiple platforms](https://github.com/skymethod/denoflare/tree/master/examples/multiplat-worker)
+
+</Aside>
+
 <Aside header="New in v0.5.0+">
 
 Support for [Cloudflare R2](https://developers.cloudflare.com/r2/)
@@ -39,13 +48,15 @@ Denoflare can:
    - see [denoflare cfapi](/cli/cfapi)
  - Manage Cloudflare R2 storage using the S3 compatibility API
    - see [denoflare r2](/cli/r2)
+ - _**New!**_ Deploy your worker to Deno Deploy, AWS Lambda, or Supabase Edge Functions
+   - see [denoflare push-deploy](/cli/push-deploy), [denoflare push-lambda](/cli/push-lambda), or [denoflare push-supabase](/cli/push-supabase)
 
 [Learn more about the CLI](/cli)
 
 ## Deploy via files or URLs
-Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.5.12/examples/hello-worker/hello.ts) is trivial:
+Denoflare leverages Deno for bundling, so it works great for local files, but also URLs.  Deploying [a module-based hello worker](https://github.com/skymethod/denoflare/blob/v0.6.0/examples/hello-worker/hello.ts) is trivial:
 ```
-denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.5.12/examples/hello-worker/hello.ts
+denoflare push https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/examples/hello-worker/hello.ts
 ```
 
 ## Roadmap
@@ -63,6 +74,12 @@ Join the project over on [the Denoflare GitHub repo](https://github.com/skymetho
 
 ## Made with Denoflare
 These projects are known to have used `denoflare` for development.
+
+#### firesky.tv
+
+[Monitor the Bluesky firehose!](https://firesky.tv)
+
+<img src="/images/firesky.png" class="large-img" style="margin: auto">
 
 #### webtail.denoflare.dev
 

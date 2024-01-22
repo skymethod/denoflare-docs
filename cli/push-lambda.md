@@ -1,45 +1,45 @@
 ---
-order: 2
-summary: Upload a Cloudflare worker script to Cloudflare
+order: 12
+summary: Upload a Cloudflare worker script to AWS Lambda + public function URL
 type: overview
 ---
 
-# denoflare push
+# denoflare push-lambda
 
-Upload a worker script to Cloudflare Workers
+Upload a Cloudflare worker script to AWS Lambda + public function URL
 
 By default, it will push once, but you can pass `--watch` to push on every change.
 
-<Aside>
-
-Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
-
-</Aside>
 
 ## --help
 
 ```
-$ denoflare push --help
-denoflare-push 0.6.0
+$ denoflare push-lambda --help
+denoflare-push-lambda 0.6.0
 
-Upload a Cloudflare worker script to Cloudflare
+Upload a Cloudflare worker script to AWS Lambda + public function URL
 
 USAGE:
-    denoflare push <script-spec> [OPTIONS]
+    denoflare push-lambda <script-spec> [OPTIONS]
 
 ARGS:
     <script-spec>                                                  Name of script defined in .denoflare config, file path to bundled js worker, or an https url to a module-based worker .ts, e.g. https://path/to/worker.ts
 
 OPTIONS:
-    --name <string>                                                Name to use for Cloudflare Worker script [default: Name of script defined in .denoflare config, or https url basename sans extension]
+    --name <string>                                                Name to use for lambda function name [default: Name of script defined in .denoflare config, or https url basename sans extension]
+    --role <role-arn>                                              IAM role arn for the lambda function (e.g. arn:aws:iam::123412341234:role/my-lambda-role)
+    --region <region-name>                                         AWS region (e.g. us-east-1)
+    --architecture <architecture>                                  Lambda architecture (one of: x86, arm)
+    --memory <mb>                                                  Memory for the lambda function, in MB (default: 128) (min: 128, max: 10240)
+    --storage <mb>                                                 Size of the /tmp directory for the lambda function, in MB (default: 512) (min: 512, max: 10240)
+    --timeout <seconds>                                            How long the lambda function is allowed to run, in seconds (default: 3) (min: 1, max: 900)
+    --no-layer                                                     Skip creating a layer, deploy the lambda as one large zip (slower for multiple pushes)
+    --deno-version <x.x.x>                                         Explicit deno version to use on lambda (default: 1.39.4)
+    --profile <string>                                             AWS credentials for deploying the worker, from $HOME/.aws/credentials
+    --access-key <string>                                          AWS credentials for deploying the worker (e.g. AKIA4ABC89ABC89ABC89)
+    --secret-key <string>                                          AWS credentials for deploying the worker (e.g. aB98mjz0aB98mjz0aB98mjz0aB98mjz0aB98mjz0)
     --watch                                                        If set, watch the local file system and automatically re-upload on script changes
     --watch-include <path>...                                      If watching, watch this additional path as well (e.g. for dynamically-imported static resources)
-    --custom-domain <domain-or-subdomain-name>...                  Bind worker to one or more Custom Domains for Workers
-    --workers-dev                                                  Enable or disable the worker workers.dev route
-    --logpush                                                      Enable or disable logpush for the worker
-    --compatibility-date <string>                                  Specific compatibility environment for the worker, see https://developers.cloudflare.com/workers/platform/compatibility-dates/
-    --compatibility-flag <string>...                               Specific compatibility flags for the worker, see https://developers.cloudflare.com/workers/platform/compatibility-dates/#compatibility-flags
-    --delete-class <class-name>...                                 Delete an obsolete Durable Object (and all data!) by class name as part of the update
                                                                    
     --text-binding <name:plain-text>...                            Plain text environment variable binding, overrides config
     --secret-binding <name:secret-text>...                         Secret text environment variable binding, overrides config
@@ -53,9 +53,6 @@ OPTIONS:
     --secret-key-binding <name:{"algorithm":{"name":"HMAC"...>...  Secret key environment variable binding, overrides config
                                                                    
     --config <path>                                                Path to config file (default: .denoflare in cwd or parents)
-    --profile <name>                                               Explicit profile to use from config file
-    --account-id <string>                                          Explicit Cloudflare account id to use for authentication
-    --api-token <string>                                           Explicit Cloudflare API token to use for authentication
                                                                    
     --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module), check=(all|local|none)
                                                                    

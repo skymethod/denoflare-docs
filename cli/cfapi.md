@@ -10,7 +10,7 @@ Call the Cloudflare REST API
 ## --help
 ```
 $ denoflare cfapi --help
-denoflare-cfapi 0.5.12
+denoflare-cfapi 0.6.0
 
 Call the Cloudflare REST API
 
@@ -46,6 +46,7 @@ SUBCOMMANDS:
     verify-token                          Verify an api token
     list-memberships                      List memberships
     list-accounts                         List accounts
+    get-account-details                   Get account details
     get-user                              Get user info
     list-durable-objects-namespaces       List Durable Objects namespaces
     list-durable-objects                  List Durable Objects for a given namespace

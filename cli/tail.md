@@ -12,7 +12,7 @@ JSON-formatted by default, but human-readable ANSI-colored output is also availa
 ## --help
 ```
 $ denoflare tail --help
-denoflare-tail 0.5.12
+denoflare-tail 0.6.0
 
 View a real-time stream of logs from a published Cloudflare worker
 
