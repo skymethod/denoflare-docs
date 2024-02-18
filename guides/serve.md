@@ -45,7 +45,7 @@ Follow these steps to setup `denoflare serve` to run from a config file.  This a
     }
     ```
 
-    In order for the configuration to work, you have to enter your accountId and apiToken from your Cloudflare Workers dashboard.
+    In order for the configuration to work, you have to enter your accountId and apiToken from your [Cloudflare Workers dashboard](https://dash.cloudflare.com/profile/api-tokens).
 
 3. Start local development by running `denoflare serve hello-local`, where `hello-local` is the name of the script in the configuration file.
 
