@@ -53,7 +53,7 @@ You can query daily aggregate Class A operations, Class B operations, egress, st
 
 Interact with your R2 storage over the S3-compatible API from the new `denoflare r2` command.
 
-Each subcommand makes R2 calls via our [R2 TypeScript API](https://github.com/skymethod/denoflare/tree/v0.6.0/common/r2), available as a module or individual functions.
+Each subcommand makes R2 calls via our [R2 TypeScript API](https://github.com/skymethod/denoflare/tree/v0.7.0/common/r2), available as a module or individual functions.
 The API is lightweight (no deps on aws-sdk or aws4fetch, only on [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser) and web standards). It can even be used within Workers themselves.
 
 <details>

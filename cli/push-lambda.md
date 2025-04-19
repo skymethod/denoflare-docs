@@ -15,7 +15,7 @@ By default, it will push once, but you can pass `--watch` to push on every chang
 
 ```
 $ denoflare push-lambda --help
-denoflare-push-lambda 0.6.0
+denoflare-push-lambda 0.7.0
 
 Upload a Cloudflare worker script to AWS Lambda + public function URL
 
@@ -51,10 +51,11 @@ OPTIONS:
     --ae-dataset-binding <name:dataset-name>...                    Analytics Engine dataset environment variable binding, overrides config
     --queue-binding <name:queue-name>...                           Queue environment variable binding, overrides config
     --secret-key-binding <name:{"algorithm":{"name":"HMAC"...>...  Secret key environment variable binding, overrides config
+    --ratelimit-binding <name:namespace-id:limit:period>...        Ratelimit environment variable binding, overrides config
                                                                    
     --config <path>                                                Path to config file (default: .denoflare in cwd or parents)
                                                                    
-    --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module), check=(all|local|none)
+    --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module|esbuild), check=(all|local|none)
                                                                    
     --help                                                         Print help information
     --verbose                                                      Toggle verbose output (when applicable)

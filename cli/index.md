@@ -10,13 +10,13 @@ Denoflare CLI is a standard [Deno](https://deno.land) program, so it benefits fr
 
 ## Installation
 
-Denoflare requires Deno, which is [easy to install](https://deno.land/manual@v1.34.2/getting_started/installation)
+Denoflare requires Deno, which is [easy to install](https://docs.deno.com/runtime/getting_started/installation/)
 
-Install `denoflare` via standard [deno install](https://deno.land/manual@v1.34.2/tools/script_installer)
+Install `denoflare` via standard [deno install](https://docs.deno.com/runtime/reference/cli/install/)
 
 ```
-deno install --unstable-worker-options --allow-read --allow-net --allow-env --allow-run --name denoflare --force \
-https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/cli/cli.ts
+deno install --global -A --unstable-worker-options --name denoflare --force \
+https://raw.githubusercontent.com/skymethod/denoflare/v0.7.0/cli/cli.ts
 ```
 
 <details>
@@ -29,8 +29,8 @@ This allows you to create multiple aliases with different permissions.
 ```bash
 # in ~/.bash_profile
 function denoflare {
-    deno run --unstable-worker-options --allow-read --allow-net --allow-env --allow-run \
-    https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/cli/cli.ts "$@"
+    deno run -A --unstable-worker-options \
+    https://raw.githubusercontent.com/skymethod/denoflare/v0.7.0/cli/cli.ts "$@"
 }
 ```
 
@@ -39,8 +39,8 @@ Or, run without an install step at all, perhaps inside a CI build. Simply replac
 e.g. instead of `denoflare serve x`
 
 ```
-deno run --unstable-worker-options --allow-read --allow-net --allow-env --allow-run \
-https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/cli/cli.ts serve x
+deno run -A --unstable-worker-options \
+https://raw.githubusercontent.com/skymethod/denoflare/v0.7.0/cli/cli.ts serve x
 ```
 
 </div>
@@ -50,7 +50,7 @@ Check out the [Releases](https://github.com/skymethod/denoflare/releases) page f
 
 <Aside>
 
-We'll start producing single `denoflare` binaries for each release (via [deno compile](https://deno.land/manual@v1.34.2/tools/compiler)) whenever [Deno supports web workers in compile](https://github.com/denoland/deno/issues/8654)
+We'll start producing single `denoflare` binaries for each release (via [deno compile](https://deno.land/manual@v1.34.2/tools/compiler)) whenever [Deno supports dynamic web workers in compile](https://github.com/denoland/deno/issues/18327)
 
 </Aside>
 
@@ -65,7 +65,7 @@ Each subcommand below also links to its own dedicated help page, if available.
 
 ```
 $ denoflare --help
-denoflare 0.6.0
+denoflare 0.7.0
 
 USAGE:
     denoflare <command> <args> <options>

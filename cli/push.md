@@ -20,7 +20,7 @@ Learn how to use `denoflare push` in the [Publish a Worker Guide](/guides/push).
 
 ```
 $ denoflare push --help
-denoflare-push 0.6.0
+denoflare-push 0.7.0
 
 Upload a Cloudflare worker script to Cloudflare
 
@@ -39,7 +39,11 @@ OPTIONS:
     --logpush                                                      Enable or disable logpush for the worker
     --compatibility-date <string>                                  Specific compatibility environment for the worker, see https://developers.cloudflare.com/workers/platform/compatibility-dates/
     --compatibility-flag <string>...                               Specific compatibility flags for the worker, see https://developers.cloudflare.com/workers/platform/compatibility-dates/#compatibility-flags
+    --observability                                                Enable or disable observability for the worker
+    --observability-sample-rate <string>                           Observability sample rate, from 0 (0%) to 1 (100%)
+    --cpu-limit <integer>                                          Maximum CPU time this worker is allowed to run, in milliseconds. default = 30000 (30 seconds)
     --delete-class <class-name>...                                 Delete an obsolete Durable Object (and all data!) by class name as part of the update
+    --version-tag <string>                                         If set, push a new version with this tag
                                                                    
     --text-binding <name:plain-text>...                            Plain text environment variable binding, overrides config
     --secret-binding <name:secret-text>...                         Secret text environment variable binding, overrides config
@@ -51,13 +55,14 @@ OPTIONS:
     --ae-dataset-binding <name:dataset-name>...                    Analytics Engine dataset environment variable binding, overrides config
     --queue-binding <name:queue-name>...                           Queue environment variable binding, overrides config
     --secret-key-binding <name:{"algorithm":{"name":"HMAC"...>...  Secret key environment variable binding, overrides config
+    --ratelimit-binding <name:namespace-id:limit:period>...        Ratelimit environment variable binding, overrides config
                                                                    
     --config <path>                                                Path to config file (default: .denoflare in cwd or parents)
     --profile <name>                                               Explicit profile to use from config file
     --account-id <string>                                          Explicit Cloudflare account id to use for authentication
     --api-token <string>                                           Explicit Cloudflare API token to use for authentication
                                                                    
-    --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module), check=(all|local|none)
+    --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module|esbuild), check=(all|local|none)
                                                                    
     --help                                                         Print help information
     --verbose                                                      Toggle verbose output (when applicable)

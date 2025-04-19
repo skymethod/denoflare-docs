@@ -20,7 +20,7 @@ Learn how to use `denoflare serve` in the [Start a New Worker Guide](/guides/ser
 
 ```
 $ denoflare serve --help
-denoflare-serve 0.6.0
+denoflare-serve 0.7.0
 
 Run a Cloudflare worker script in a local Deno web server
 
@@ -48,13 +48,14 @@ OPTIONS:
     --ae-dataset-binding <name:dataset-name>...                    Analytics Engine dataset environment variable binding, overrides config
     --queue-binding <name:queue-name>...                           Queue environment variable binding, overrides config
     --secret-key-binding <name:{"algorithm":{"name":"HMAC"...>...  Secret key environment variable binding, overrides config
+    --ratelimit-binding <name:namespace-id:limit:period>...        Ratelimit environment variable binding, overrides config
                                                                    
     --config <path>                                                Path to config file (default: .denoflare in cwd or parents)
     --profile <name>                                               Explicit profile to use from config file
     --account-id <string>                                          Explicit Cloudflare account id to use for authentication
     --api-token <string>                                           Explicit Cloudflare API token to use for authentication
                                                                    
-    --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module), check=(all|local|none)
+    --bundle <name=value>...                                       Advanced options used when emitting javascript bundles: backend=(process|module|esbuild), check=(all|local|none)
                                                                    
     --help                                                         Print help information
     --verbose                                                      Toggle verbose output (when applicable)

@@ -24,7 +24,7 @@ There are two ways to use the Denoflare CLI with a configuration file:
     // This jsonc file supports comments and trailing commas!
 
     // Optional schema to get auto-completions when editing this file in vscode, etc
-    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.6.0/common/config.schema.json",
+    "$schema": "https://raw.githubusercontent.com/skymethod/denoflare/v0.7.0/common/config.schema.json",
 
     // Define script configurations by name, and their associated bindings and options.
     // You can then simply refer to them by name in your denoflare commands.
@@ -137,12 +137,12 @@ export interface Script {
     readonly localPort?: number;
 
     /** If specified, replace the hostname portion of the incoming `Request.url` at runtime to use this hostname instead of `localhost`.
-     *
+     * 
      * Useful if your worker does hostname-based routing. */
     readonly localHostname?: string;
 
     /** If specified, use this isolation level when running `serve`, the local dev server.
-     *
+     * 
      * (Default: 'isolate') */
     readonly localIsolation?: Isolation;
 
@@ -153,7 +153,7 @@ export interface Script {
     readonly localKeyPem?: string;
 
     /** If specified, use a specific, named Profile defined in `config.profiles`.
-     *
+     * 
      * (Default: the Profile marked as `default`, or the only Profile defined) */
     readonly profile?: string;
 
@@ -171,6 +171,40 @@ export interface Script {
 
     /** If specified, enable or disable the workers.dev route for this worker when deploying to Cloudflare. */
     readonly workersDev?: boolean;
+
+    /** If specified, enable or disable logpush for this worker.
+     * 
+     * See https://blog.cloudflare.com/workers-logpush-ga/
+     */
+    readonly logpush?: boolean;
+
+    /** If specified, the specific compatibility environment for this worker.
+     * 
+     * See https://developers.cloudflare.com/workers/platform/compatibility-dates/ */
+    readonly compatibilityDate?: string;
+
+    /** If specified, the specific compatibility flags for this worker.
+     * 
+     * See https://developers.cloudflare.com/workers/platform/compatibility-dates/#compatibility-flags */
+    readonly compatibilityFlags?: string[];
+
+    /** Whether or not observability is enabled for this worker. */
+    readonly observability?: boolean;
+
+    /** Observability sample rate, from 0 to 1 (100%, default) */
+    readonly observabilitySampleRate?: number;
+
+    /** Maximum CPU time this worker is allowed to run, in milliseconds. default = 30000 (30 seconds) */
+    readonly cpuLimit?: number;
+
+    /** Name-value pairs to use when pushing to AWS Lambda. */
+    readonly lambda?: string;
+
+    /** Name-value pairs to use when pushing to Deno Deploy. */
+    readonly deploy?: string;
+
+    /** Name-value pairs to use when pushing to Supabase Edge Functions. */
+    readonly supabase?: string;
 }
 
 /** Code isolation to use when running worker scripts with `serve`, the local dev server.

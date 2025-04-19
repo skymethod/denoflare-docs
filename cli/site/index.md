@@ -29,8 +29,8 @@ Use `denoflare site generate` inside a custom build.
 
 ```
 #!/bin/sh
-DENO_VERSION="v1.34.2"
-DENOFLARE_VERSION="v0.6.0"
+DENO_VERSION="v1.46.3"
+DENOFLARE_VERSION="v0.7.0"
 curl -fsSL https://deno.land/x/install/install.sh | DENO_INSTALL=./deno-$DENO_VERSION sh -s $DENO_VERSION
 NO_COLOR=1 DENO_VERSION=$DENO_VERSION DENOFLARE_VERSION=${DENOFLARE_VERSION} \
     ./deno-$DENO_VERSION/bin/deno run --allow-all \
@@ -41,7 +41,7 @@ NO_COLOR=1 DENO_VERSION=$DENO_VERSION DENOFLARE_VERSION=${DENOFLARE_VERSION} \
 ## --help
 ```
 $ denoflare site --help
-denoflare-site 0.6.0
+denoflare-site 0.7.0
 
 Develop and deploy a static docs site to Cloudflare Pages
 

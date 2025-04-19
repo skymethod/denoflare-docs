@@ -10,7 +10,7 @@ Host a proxy endpoint to Analytics Engine more compatible with Clickhouse plugin
 ## --help
 ```
 $ denoflare ae-proxy --help
-denoflare-ae-proxy 0.6.0
+denoflare-ae-proxy 0.7.0
 
 Host a proxy endpoint to Analytics Engine more compatible with Clickhouse plugins
 
