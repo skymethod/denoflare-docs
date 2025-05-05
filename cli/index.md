@@ -23,6 +23,8 @@ https://raw.githubusercontent.com/skymethod/denoflare/v0.7.0/cli/cli.ts
 <summary>Alternatives: shell function or no-install direct run command for CI build</summary>
 <div>
 
+### Shell function
+
 You can also "install" by defining a shell function in your shell config to a `deno run` command.
 This allows you to create multiple aliases with different permissions.
 
@@ -34,6 +36,8 @@ function denoflare {
 }
 ```
 
+### Run without install
+
 Or, run without an install step at all, perhaps inside a CI build. Simply replace `denoflare` in our docs with the long-form `deno run` command.
 
 e.g. instead of `denoflare serve x`
@@ -42,6 +46,19 @@ e.g. instead of `denoflare serve x`
 deno run -A --unstable-worker-options \
 https://raw.githubusercontent.com/skymethod/denoflare/v0.7.0/cli/cli.ts serve x
 ```
+
+### Use with `deno task` (unstable)
+
+Above can also be saved as a [deno task](https://deno.land/manual@v1.26.1/tools/task_runner):
+```json
+{
+  "tasks": {
+    "denoflare": "deno run --unstable --allow-read --allow-net --allow-env --allow-run https://raw.githubusercontent.com/skymethod/denoflare/v0.5.9/cli/cli.ts",
+  }
+}
+```
+
+You can then run Denoflare simply `deno task denoflare`, e.g. `deno task denoflare serve x`
 
 </div>
 </details>
